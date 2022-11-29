@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import logo from "../img/tane-logo.png";
 import { useMenuContext } from "../utils/MenuContext";
+import { Link } from "react-router-dom";
 
 const NavContainer = styled.nav`
   display: flex;
@@ -34,6 +35,7 @@ const MenuButton = styled.button`
 const MenuContainer = styled.ul`
   position: fixed;
   background-color: white;
+  list-style: none;
 `;
 
 export const NavBar = () => {
@@ -52,10 +54,12 @@ export const NavBar = () => {
       </NavContainer>
       {menuVisible ? (
         <MenuContainer>
-          <li>Hello</li>
-          <li>Hello</li>
-          <li>Hello</li>
-          <li>Hello</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
         </MenuContainer>
       ) : null}
     </>
