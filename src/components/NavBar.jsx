@@ -25,11 +25,14 @@ const Title = styled.h1`
 
 const MenuButton = styled.button`
   background-color: rgba(255, 255, 255, 0);
+  width: 3rem;
   border: none;
   font-size: 3rem;
   position: absolute;
   align-self: center;
-  left: 1rem;
+  left: 0.5rem;
+  padding: 0;
+  margin: 0;
 `;
 
 const MenuContainer = styled.ul`
