@@ -11,11 +11,12 @@ const NavContainer = styled.nav`
   height: 4rem;
   position: fixed;
   top: 0;
-  border-style: none none solid none;
+  z-index: 999;
+  background-color: red;
 `;
 
 const Title = styled.h1`
-  position: fixed;
+  position: absolute;
   margin: 0;
   color: #2f2f2f;
   text-align: center;
@@ -25,6 +26,7 @@ const Title = styled.h1`
 
 const MenuButton = styled.button`
   background-color: rgba(255, 255, 255, 0);
+  color: black;
   width: 3rem;
   border: none;
   font-size: 3rem;
@@ -39,6 +41,12 @@ const MenuContainer = styled.ul`
   position: fixed;
   background-color: white;
   list-style: none;
+`;
+
+const MenuLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+  font-size: 3rem;
 `;
 
 export const NavBar = () => {
@@ -58,10 +66,10 @@ export const NavBar = () => {
       {menuVisible ? (
         <MenuContainer>
           <li>
-            <Link to="/">Home</Link>
+            <MenuLink to="/">Home</MenuLink>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <MenuLink to="/about">About</MenuLink>
           </li>
         </MenuContainer>
       ) : null}

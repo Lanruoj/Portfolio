@@ -8,6 +8,7 @@ import { Main } from "./components/Main";
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
+  const [currentPage, setCurrentPage] = useState("home");
   return (
     <>
       <MenuContext.Provider value={{ menuVisible, setMenuVisible }}>
