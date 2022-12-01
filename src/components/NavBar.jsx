@@ -39,7 +39,6 @@ const MenuButton = styled.button`
 
 const MenuContainer = styled.ul`
   position: fixed;
-  /* top: 0; */
   background-color: white;
   list-style: none;
   left: ${(props) => (props.menuVisible ? "0px" : "-50vw")};
