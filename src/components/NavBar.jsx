@@ -5,18 +5,17 @@ import { useMenuContext } from "../utils/MenuContext";
 import { Link } from "react-router-dom";
 
 const NavContainer = styled.nav`
+  position: fixed;
   display: flex;
   justify-content: center;
   width: 100%;
   height: 4rem;
-  position: fixed;
   top: 0;
   z-index: 999;
   background-color: red;
 `;
 
 const Title = styled.h1`
-  position: fixed;
   margin: 0;
   color: #2f2f2f;
   text-align: center;
@@ -25,12 +24,12 @@ const Title = styled.h1`
 `;
 
 const MenuButton = styled.button`
+  position: absolute;
   background-color: rgba(255, 255, 255, 0);
   color: black;
   width: 3rem;
   border: none;
   font-size: 3rem;
-  position: fixed;
   align-self: center;
   left: 0.5rem;
   padding: 0;
@@ -39,8 +38,13 @@ const MenuButton = styled.button`
 
 const MenuContainer = styled.ul`
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: white;
   list-style: none;
+  width: 50vw;
+  height: 100vh;
   left: ${(props) => (props.menuVisible ? "0px" : "-50vw")};
   background-color: ${(props) => (props.menuVisible ? "red" : "blue")};
   transition: 1s;
