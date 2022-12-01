@@ -1,6 +1,5 @@
-import { useState } from "react";
 import styled from "styled-components";
-import logo from "../img/tane-logo.png";
+// import logo from "../img/tane-logo.png";
 import { useMenuContext } from "../utils/MenuContext";
 import { Link } from "react-router-dom";
 
@@ -12,7 +11,6 @@ const NavContainer = styled.nav`
   height: 4rem;
   top: 0;
   z-index: 999;
-  /* background-color: red; */
 `;
 
 const Title = styled.h1`
@@ -46,8 +44,7 @@ const MenuContainer = styled.ul`
   width: 50vw;
   height: 100vh;
   left: ${(props) => (props.menuVisible ? "0px" : "-50vw")};
-  /* background-color: ${(props) => (props.menuVisible ? "red" : "blue")}; */
-  transition: 1s;
+  transition: 0.5s;
 `;
 
 const MenuLink = styled(Link)`
