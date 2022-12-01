@@ -2,6 +2,7 @@ import styled from "styled-components";
 // import logo from "../img/tane-logo.png";
 import { useMenuContext } from "../utils/MenuContext";
 import { Link } from "react-router-dom";
+import { usePageContext } from "../utils/PageContext";
 
 const NavContainer = styled.nav`
   position: fixed;
@@ -59,6 +60,11 @@ export const NavBar = () => {
     menuVisible ? setMenuVisible(false) : setMenuVisible(true);
   };
 
+  const { currentPage, setCurrentPage } = usePageContext();
+  const handleClick = (event) => {
+    setCurrentPage(event.target.id);
+  };
+
   return (
     <>
       <NavContainer>
@@ -69,10 +75,14 @@ export const NavBar = () => {
       </NavContainer>
       <MenuContainer menuVisible={menuVisible && menuVisible}>
         <li>
-          <MenuLink to="/">Home</MenuLink>
+          <MenuLink to="/" onClick={handleClick} id="home">
+            {currentPage === "home" ? <s>Home</s> : "Home"}
+          </MenuLink>
         </li>
         <li>
-          <MenuLink to="/about">About</MenuLink>
+          <MenuLink to="/about" onClick={handleClick} id="about">
+            {currentPage === "about" ? <s>About</s> : "About"}
+          </MenuLink>
         </li>
       </MenuContainer>
     </>
