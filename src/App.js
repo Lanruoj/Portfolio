@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
 import { MenuContext } from "./utils/MenuContext";
 import { useState } from "react";
