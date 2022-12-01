@@ -12,7 +12,7 @@ const NavContainer = styled.nav`
   height: 4rem;
   top: 0;
   z-index: 999;
-  background-color: red;
+  /* background-color: red; */
 `;
 
 const Title = styled.h1`
@@ -46,7 +46,7 @@ const MenuContainer = styled.ul`
   width: 50vw;
   height: 100vh;
   left: ${(props) => (props.menuVisible ? "0px" : "-50vw")};
-  background-color: ${(props) => (props.menuVisible ? "red" : "blue")};
+  /* background-color: ${(props) => (props.menuVisible ? "red" : "blue")}; */
   transition: 1s;
 `;
 
