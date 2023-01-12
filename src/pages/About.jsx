@@ -1,7 +1,9 @@
+import { Header } from "../components/Header";
+
 export const About = () => {
   return (
     <>
-      <h1>About</h1>
+      <Header>About</Header>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper
         ornare felis, ac efficitur ante rutrum ac. Proin viverra et est at
