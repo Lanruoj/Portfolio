@@ -72,12 +72,12 @@ export const NavBar = (props) => {
       </NavContainer>
       <MenuContainer menuVisible={menuVisible && menuVisible}>
         <li>
-          <MenuLink to="/" id="home">
+          <MenuLink to="/" id="home" onClick={toggleMenu}>
             {urlPath === "/" ? <s>Home</s> : "Home"}
           </MenuLink>
         </li>
         <li>
-          <MenuLink to="/about" id="about">
+          <MenuLink to="/about" id="about" onClick={toggleMenu}>
             {urlPath === "/about" ? <s>About</s> : "About"}
           </MenuLink>
         </li>
