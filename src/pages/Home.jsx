@@ -19,7 +19,7 @@ export const Home = () => {
         </ListItem>
       </ListCard>
       <h2>Tech stack</h2>
-      <ul>
+      <ListCard>
         <ListItem>HTML / CSS / SCSS</ListItem>
         <ListItem>JavaScript</ListItem>
         <ListItem>React</ListItem>
@@ -34,16 +34,16 @@ export const Home = () => {
         <ListItem>Marshmallow</ListItem>
         <ListItem>Bcrypt</ListItem>
         <ListItem>JSON Web Tokens</ListItem>
-      </ul>
+      </ListCard>
       <h2>Software</h2>
-      <ul>
+      <ListCard>
         <ListItem>Visual Studio Code</ListItem>
         <ListItem>Git / GitHub</ListItem>
         <ListItem>Postman</ListItem>
         <ListItem>Balsamiq</ListItem>
         <ListItem>Trello</ListItem>
         <ListItem>CLI</ListItem>
-      </ul>
+      </ListCard>
     </>
   );
 };
