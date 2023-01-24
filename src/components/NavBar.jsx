@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import logo from "../img/tane-trans.png";
 import { useMenuContext } from "../utils/MenuContext";
-import { usePageContext } from "../utils/PageContext";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 const NavContainer = styled.nav`
   position: fixed;
@@ -64,7 +62,6 @@ export const NavBar = (props) => {
   const toggleMenu = () => {
     menuVisible ? setMenuVisible(false) : setMenuVisible(true);
   };
-  const { currentPage, setCurrentPage } = usePageContext();
   let urlPath = props.location.pathname;
 
   return (
