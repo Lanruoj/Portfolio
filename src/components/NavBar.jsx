@@ -67,7 +67,7 @@ export const NavBar = (props) => {
   return (
     <>
       <NavContainer>
-        <MenuButton onClick={toggleMenu}>X</MenuButton>
+        <MenuButton onClick={toggleMenu}>&gt;</MenuButton>
         <Logo src={logo} />
       </NavContainer>
       <MenuContainer menuVisible={menuVisible && menuVisible}>
