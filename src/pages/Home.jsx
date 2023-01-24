@@ -1,46 +1,48 @@
 import { Header } from "../components/Header";
+import { ListCard } from "../components/styled/ListCard";
+import { ListItem } from "../components/styled/ListItem";
 
 export const Home = () => {
   return (
     <>
       <Header>Snapshot</Header>
       <h2>Personal details</h2>
-      <ul>
-        <li>
+      <ListCard>
+        <ListItem>
           <h3>Name:</h3>Tāne Kaio
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
           <h3>Age:</h3>27
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
           <h3>Location:</h3>Melbourne, Victoria, Australia
-        </li>
-      </ul>
+        </ListItem>
+      </ListCard>
       <h2>Tech stack</h2>
       <ul>
-        <li>HTML / CSS / SCSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Express</li>
-        <li>Node</li>
-        <li>Mongoose</li>
-        <li>MongoDB</li>
-        <li>Python</li>
-        <li>Flask</li>
-        <li>PostgreSQL</li>
-        <li>SQL Alchemy</li>
-        <li>Marshmallow</li>
-        <li>Bcrypt</li>
-        <li>JSON Web Tokens</li>
+        <ListItem>HTML / CSS / SCSS</ListItem>
+        <ListItem>JavaScript</ListItem>
+        <ListItem>React</ListItem>
+        <ListItem>Express</ListItem>
+        <ListItem>Node</ListItem>
+        <ListItem>Mongoose</ListItem>
+        <ListItem>MongoDB</ListItem>
+        <ListItem>Python</ListItem>
+        <ListItem>Flask</ListItem>
+        <ListItem>PostgreSQL</ListItem>
+        <ListItem>SQL Alchemy</ListItem>
+        <ListItem>Marshmallow</ListItem>
+        <ListItem>Bcrypt</ListItem>
+        <ListItem>JSON Web Tokens</ListItem>
       </ul>
       <h2>Software</h2>
       <ul>
-        <li>Visual Studio Code</li>
-        <li>Git / GitHub</li>
-        <li>Postman</li>
-        <li>Balsamiq</li>
-        <li>Trello</li>
-        <li>CLI</li>
+        <ListItem>Visual Studio Code</ListItem>
+        <ListItem>Git / GitHub</ListItem>
+        <ListItem>Postman</ListItem>
+        <ListItem>Balsamiq</ListItem>
+        <ListItem>Trello</ListItem>
+        <ListItem>CLI</ListItem>
       </ul>
     </>
   );
