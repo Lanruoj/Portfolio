@@ -1,12 +1,5 @@
-import styled from "styled-components";
-import { ListItem } from "./ListItem";
-
-const StyledUl = styled.ul`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-`;
+import { Ul } from "./styled/Ul";
+import { ListItem } from "./styled/ListItem";
 
 const ListCard = (props) => {
   return (

@@ -1,5 +1,5 @@
 import { LocalLink } from "../components/LocalLink";
-import { ListCardWithLabels } from "../components/styled/ListCardWithLabels";
+import { ListCardWithLabels } from "../components/ListCardWithLabels";
 
 export const Home = () => {
   const personalDetails = [

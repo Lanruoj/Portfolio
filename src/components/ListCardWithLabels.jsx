@@ -1,17 +1,10 @@
-import styled from "styled-components";
-import { ListItem } from "./ListItem";
-
-const StyledUl = styled.ul`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-`;
+import { Ul } from "./styled/Ul";
+import { ListItem } from "./styled/ListItem";
 
 const ListCardWithLabels = (props) => {
   return (
     <>
-      <StyledUl>
+      <Ul>
         <h2>{props.title}</h2>
         {props.items.map((item) => {
           return (
@@ -21,7 +14,7 @@ const ListCardWithLabels = (props) => {
             </ListItem>
           );
         })}
-      </StyledUl>
+      </Ul>
     </>
   );
 };
