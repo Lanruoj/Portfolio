@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
 import { MenuContext } from "./utils/MenuContext";
 import { PageContext } from "./utils/PageContext";
@@ -10,11 +10,12 @@ import { Main } from "./components/Main";
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [currentPage, setCurrentPage] = useState("home");
+  const location = useLocation();
   return (
     <>
       <PageContext.Provider value={{ currentPage, setCurrentPage }}>
         <MenuContext.Provider value={{ menuVisible, setMenuVisible }}>
-          <NavBar />
+          <NavBar location={location} />
           <Main menuVisible={menuVisible ? true : false}>
             <Routes>
               <Route path="/" element={<Home />} />

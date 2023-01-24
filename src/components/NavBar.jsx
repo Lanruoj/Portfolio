@@ -3,6 +3,7 @@ import logo from "../img/tane-trans.png";
 import { useMenuContext } from "../utils/MenuContext";
 import { usePageContext } from "../utils/PageContext";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const NavContainer = styled.nav`
   position: fixed;
@@ -58,16 +59,13 @@ const MenuLink = styled(Link)`
   font-size: 3rem;
 `;
 
-export const NavBar = () => {
+export const NavBar = (props) => {
   const { menuVisible, setMenuVisible } = useMenuContext();
   const toggleMenu = () => {
     menuVisible ? setMenuVisible(false) : setMenuVisible(true);
   };
-
   const { currentPage, setCurrentPage } = usePageContext();
-  const handleClick = (event) => {
-    setCurrentPage(event.target.id);
-  };
+  let urlPath = props.location.pathname;
 
   return (
     <>
@@ -77,13 +75,13 @@ export const NavBar = () => {
       </NavContainer>
       <MenuContainer menuVisible={menuVisible && menuVisible}>
         <li>
-          <MenuLink to="/" onClick={handleClick} id="home">
-            {currentPage === "home" ? <s>Home</s> : "Home"}
+          <MenuLink to="/" id="home">
+            {urlPath === "/" ? <s>Home</s> : "Home"}
           </MenuLink>
         </li>
         <li>
-          <MenuLink to="/about" onClick={handleClick} id="about">
-            {currentPage === "about" ? <s>About</s> : "About"}
+          <MenuLink to="/about" id="about">
+            {urlPath === "/about" ? <s>About</s> : "About"}
           </MenuLink>
         </li>
       </MenuContainer>
