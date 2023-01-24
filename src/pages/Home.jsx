@@ -1,3 +1,4 @@
+import { LocalLink } from "../components/LocalLink";
 import { ListCardWithLabels } from "../components/styled/ListCardWithLabels";
 
 export const Home = () => {
@@ -22,6 +23,7 @@ export const Home = () => {
     <>
       <ListCardWithLabels items={personalDetails} />
       <ListCardWithLabels items={techSkills} />
+      <LocalLink to="/about" text="Learn more" />
     </>
   );
 };

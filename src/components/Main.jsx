@@ -5,4 +5,5 @@ export const Main = styled.main`
   left: ${(props) => (props.menuVisible ? "50vw" : "0px")};
   transition: 0.5s;
   padding: 1rem;
+  text-align: center;
 `;
