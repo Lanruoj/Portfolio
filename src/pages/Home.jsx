@@ -1,13 +1,19 @@
 import { Header } from "../components/Header";
 import { ListCard } from "../components/styled/ListCard";
-import { ListItem } from "../components/styled/ListItem";
 
 export const Home = () => {
   return (
     <>
       <Header>Snapshot</Header>
-      <h2>Personal details</h2>
-      <ListCard>
+      <ListCard
+        title="Details"
+        items={[
+          { label: "Name", value: "Tane" },
+          { label: "Age", value: "27" },
+          { label: "Location", value: "Melbourne, Victoria, Australia" },
+        ]}
+      />
+      {/* <ListCard>
         <ListItem>
           <h3>Name:</h3>Tāne Kaio
         </ListItem>
@@ -17,7 +23,7 @@ export const Home = () => {
         <ListItem>
           <h3>Location:</h3>Melbourne, Victoria, Australia
         </ListItem>
-      </ListCard>
+      </ListCard> 
       <h2>Tech stack</h2>
       <ListCard>
         <ListItem>HTML / CSS / SCSS</ListItem>
@@ -43,7 +49,7 @@ export const Home = () => {
         <ListItem>Balsamiq</ListItem>
         <ListItem>Trello</ListItem>
         <ListItem>CLI</ListItem>
-      </ListCard>
+      </ListCard> */}
     </>
   );
 };
