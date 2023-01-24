@@ -1,11 +1,12 @@
 import { Header } from "../components/Header";
 import { ListCard } from "../components/styled/ListCard";
+import { ListCardWithLabels } from "../components/styled/ListCardWithLabels";
 
 export const Home = () => {
   return (
     <>
       <Header>Snapshot</Header>
-      <ListCard
+      <ListCardWithLabels
         title="Details"
         items={[
           { label: "Name", value: "Tane" },
@@ -13,35 +14,9 @@ export const Home = () => {
           { label: "Location", value: "Melbourne, Victoria, Australia" },
         ]}
       />
-      {/* <ListCard>
-        <ListItem>
-          <h3>Name:</h3>Tāne Kaio
-        </ListItem>
-        <ListItem>
-          <h3>Age:</h3>27
-        </ListItem>
-        <ListItem>
-          <h3>Location:</h3>Melbourne, Victoria, Australia
-        </ListItem>
-      </ListCard> 
       <h2>Tech stack</h2>
-      <ListCard>
-        <ListItem>HTML / CSS / SCSS</ListItem>
-        <ListItem>JavaScript</ListItem>
-        <ListItem>React</ListItem>
-        <ListItem>Express</ListItem>
-        <ListItem>Node</ListItem>
-        <ListItem>Mongoose</ListItem>
-        <ListItem>MongoDB</ListItem>
-        <ListItem>Python</ListItem>
-        <ListItem>Flask</ListItem>
-        <ListItem>PostgreSQL</ListItem>
-        <ListItem>SQL Alchemy</ListItem>
-        <ListItem>Marshmallow</ListItem>
-        <ListItem>Bcrypt</ListItem>
-        <ListItem>JSON Web Tokens</ListItem>
-      </ListCard>
-      <h2>Software</h2>
+      <ListCard title="Tech stack" items={["Banana"]} />
+      {/* <h2>Software</h2>
       <ListCard>
         <ListItem>Visual Studio Code</ListItem>
         <ListItem>Git / GitHub</ListItem>

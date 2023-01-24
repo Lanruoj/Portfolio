@@ -8,17 +8,22 @@ const StyledUl = styled.ul`
   list-style: none;
 `;
 
-const ListCard = (props) => {
+const ListCardWithLabels = (props) => {
   return (
     <>
       <StyledUl>
         <h2>{props.title}</h2>
         {props.items.map((item) => {
-          return <ListItem>{item}</ListItem>;
+          return (
+            <ListItem>
+              {item.label ? <h3>{item.label}</h3> : null}
+              {item.value}
+            </ListItem>
+          );
         })}
       </StyledUl>
     </>
   );
 };
 
-export { ListCard };
+export { ListCardWithLabels };
