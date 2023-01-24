@@ -1,8 +1,8 @@
 import styled from "styled-components";
-// import logo from "../img/tane-logo.png";
+import logo from "../img/tane-trans.png";
 import { useMenuContext } from "../utils/MenuContext";
-import { Link } from "react-router-dom";
 import { usePageContext } from "../utils/PageContext";
+import { Link } from "react-router-dom";
 
 const NavContainer = styled.nav`
   position: fixed;
@@ -14,13 +14,13 @@ const NavContainer = styled.nav`
   z-index: 999;
 `;
 
-const Title = styled.h1`
-  margin: 0;
-  color: #2f2f2f;
-  text-align: center;
-  font-family: "Karla", sans-serif;
-  font-size: 3rem;
-`;
+// const Title = styled.h1`
+//   margin: 0;
+//   color: #2f2f2f;
+//   text-align: center;
+//   font-family: "Karla", sans-serif;
+//   font-size: 3rem;
+// `;
 
 const MenuButton = styled.button`
   position: absolute;
@@ -48,6 +48,10 @@ const MenuContainer = styled.ul`
   transition: 0.5s;
 `;
 
+const Logo = styled.img`
+  padding: 0.5rem;
+`;
+
 const MenuLink = styled(Link)`
   color: black;
   text-decoration: none;
@@ -69,9 +73,10 @@ export const NavBar = () => {
     <>
       <NavContainer>
         <MenuButton onClick={toggleMenu}>X</MenuButton>
-        <Title>
+        {/* <Title>
           <i>Tāne</i>
-        </Title>
+        </Title> */}
+        <Logo src={logo} />
       </NavContainer>
       <MenuContainer menuVisible={menuVisible && menuVisible}>
         <li>
