@@ -21,6 +21,14 @@ export const Projects = () => {
         }
         link={"https://github.com/Lanruoj/Tracks-Task-Manager?"}
       />
+      <Project
+        heading={"Portfolio (old)"}
+        img={require("../img/portfolio-scr.png")}
+        text={
+          "My portfolio site using purely HTML & CSS/SCSS built during my first few months of learning to code"
+        }
+        link={"https://github.com/Lanruoj/Lanruoj.github.io?"}
+      />
     </>
   );
 };

@@ -9,6 +9,7 @@ const ProjectContainer = styled.article`
 const ProjectImage = styled.img`
   max-width: 90%;
   border-radius: 1rem;
+  margin: 0.5rem;
 `;
 
 const ProjectHeading = styled.h3`
@@ -20,7 +21,9 @@ export const Project = (props) => {
     <ProjectContainer>
       <ProjectHeading>{props.heading}</ProjectHeading>
       <p>{props.text}</p>
-      <ProjectImage src={props.img} />
+      <a href={props.link} target="_blank">
+        <ProjectImage src={props.img} />
+      </a>
       <ExternalLink to={props.link} text="GitHub" />
     </ProjectContainer>
   );
