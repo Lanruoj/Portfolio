@@ -2,13 +2,13 @@ import styled from "styled-components";
 import { ExternalLink } from "./ExternalLink";
 
 const ProjectContainer = styled.article`
-  /* background-color: red; */
   border-radius: 1rem;
   padding: 1rem;
 `;
 
 const ProjectImage = styled.img`
   max-width: 90%;
+  border-radius: 1rem;
 `;
 
 const ProjectHeading = styled.h3`
