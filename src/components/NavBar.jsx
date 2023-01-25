@@ -48,6 +48,7 @@ const MenuContainer = styled.ul`
 
 const Logo = styled.img`
   padding: 0.5rem;
+  visibility: hidden;
 `;
 
 const MenuLink = styled(Link)`

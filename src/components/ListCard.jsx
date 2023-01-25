@@ -4,12 +4,12 @@ import { ListItem } from "./styled/ListItem";
 const ListCard = (props) => {
   return (
     <>
-      <StyledUl>
+      <Ul>
         <h2>{props.title}</h2>
         {props.items.map((item) => {
           return <ListItem>{item}</ListItem>;
         })}
-      </StyledUl>
+      </Ul>
     </>
   );
 };
