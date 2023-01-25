@@ -1,11 +1,11 @@
 import { Header } from "../components/Header";
-import { ImageCard } from "../components/styled/ImageCard";
+import { Portrait } from "../components/styled/Portrait";
 
 export const About = () => {
   return (
     <>
       <Header>Who am I?</Header>
-      <ImageCard src={require("../img/portrait-cropped.jpeg")} />
+      <Portrait src={require("../img/portrait-cropped.jpeg")} />
       <p>
         Hello! I'm Tāne <i>(pronounced Tah-nay)</i> and I'm a 27 year old
         currently based in the lush surroundings of the foothills of the

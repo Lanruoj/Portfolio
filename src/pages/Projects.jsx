@@ -1,3 +1,9 @@
+import { Header } from "../components/Header";
+
 export const Projects = () => {
-  return <p>Hello</p>;
+  return (
+    <>
+      <Header>Projects</Header>
+    </>
+  );
 };
