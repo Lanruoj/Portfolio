@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { Header } from "./Header";
 
 const ProjectContainer = styled.article`
-  background-color: red;
+  /* background-color: red; */
   border-radius: 1rem;
   padding: 1rem;
 `;

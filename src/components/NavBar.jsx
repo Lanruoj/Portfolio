@@ -39,7 +39,6 @@ const MenuContainer = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
   list-style: none;
   width: 50vw;
   height: 100vh;
