@@ -12,7 +12,11 @@ const StyledLink = styled(Link)`
 `;
 
 const LocalLink = (props) => {
-  return <StyledLink to={props.to}>&gt; {props.text} </StyledLink>;
+  return (
+    <StyledLink to={props.to}>
+      &gt; <i>{props.text}</i>{" "}
+    </StyledLink>
+  );
 };
 
 export { LocalLink };

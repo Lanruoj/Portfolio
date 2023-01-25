@@ -11,7 +11,11 @@ const StyledLink = styled.a`
 `;
 
 const ExternalLink = (props) => {
-  return <StyledLink href={props.to}>&gt; {props.text} </StyledLink>;
+  return (
+    <StyledLink href={props.to}>
+      &gt; <i>{props.text}</i>{" "}
+    </StyledLink>
+  );
 };
 
 export { ExternalLink };
