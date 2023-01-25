@@ -86,6 +86,11 @@ export const NavBar = (props) => {
             {urlPath === "/projects" ? <s>Projects</s> : "Projects"}
           </MenuLink>
         </li>
+        <li>
+          <MenuLink to="/contact" id="contact" onClick={toggleMenu}>
+            {urlPath === "/contact" ? <s>Contact</s> : "Contact"}
+          </MenuLink>
+        </li>
       </MenuContainer>
     </>
   );
