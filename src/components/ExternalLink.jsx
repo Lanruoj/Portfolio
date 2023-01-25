@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const StyledLink = styled.a`
-  margin-top: 3rem;
+  display: block;
+  margin-top: 1rem;
   font-family: "Spline Sans Mono", sans-serif;
   font-size: 1.5rem;
   color: black;

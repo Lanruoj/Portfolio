@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ExternalLink } from "./ExternalLink";
 
 const ProjectContainer = styled.article`
   /* background-color: red; */
@@ -20,12 +21,11 @@ export const Project = (props) => {
       <ProjectHeading>{props.heading}</ProjectHeading>
       <p>{props.text}</p>
       <ProjectImage src={props.img} />
-      <a
-        href="https://github.com/Lanruoj/Gig-Guide-Webserver-API?"
+      <ExternalLink
+        to="https://github.com/Lanruoj/Gig-Guide-Webserver-API?"
         target="_blank"
-      >
-        GitHub
-      </a>
+        text="GitHub"
+      />
     </ProjectContainer>
   );
 };
