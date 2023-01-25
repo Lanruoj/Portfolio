@@ -12,8 +12,8 @@ export const About = () => {
         Dandenong Ranges in Melbourne, Victoria. As a student of Web Development
         at Coder Academy I spend most of my time learning and practising code,
         sharpening my problem solving skills and learning more about the world
-        of tech. My adventure into the world of coding may not have started long
-        ago, however I've already learned an immense amount of valuable
+        of technology. My adventure into the land of coding may not have started
+        long ago, however I've already learned an immense amount of valuable
         practical lessons and industry specific knowledge.
       </p>
     </>
