@@ -21,11 +21,7 @@ export const Project = (props) => {
       <ProjectHeading>{props.heading}</ProjectHeading>
       <p>{props.text}</p>
       <ProjectImage src={props.img} />
-      <ExternalLink
-        to="https://github.com/Lanruoj/Gig-Guide-Webserver-API?"
-        target="_blank"
-        text="GitHub"
-      />
+      <ExternalLink to={props.link} text="GitHub" />
     </ProjectContainer>
   );
 };

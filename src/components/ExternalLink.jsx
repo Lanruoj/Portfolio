@@ -12,7 +12,7 @@ const StyledLink = styled.a`
 
 const ExternalLink = (props) => {
   return (
-    <StyledLink href={props.to}>
+    <StyledLink href={props.to} target="_blank">
       &gt; <i>{props.text}</i>{" "}
     </StyledLink>
   );
