@@ -2,9 +2,11 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const StyledLink = styled(Link)`
-  font-size: 2rem;
+  margin-top: 3rem;
+  font-family: "Spline Sans Mono", sans-serif;
+  font-size: 1.5rem;
   color: black;
-  text-decoration: none;
+  text-decoration: underline;
   text-align: center;
 `;
 

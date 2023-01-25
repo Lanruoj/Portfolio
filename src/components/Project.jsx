@@ -10,16 +10,16 @@ const ProjectImage = styled.img`
   max-width: 90%;
 `;
 
+const ProjectHeading = styled.h3`
+  font-family: "Spline Sans Mono", monospace;
+`;
+
 export const Project = (props) => {
   return (
     <ProjectContainer>
-      <h3>Portfolio</h3>
-      <p>
-        uifsdgjh nuijroeinfh jrojnfg dfuhigewn hreguirejhfn iuehguidh rgbduiorj
-        hfiehgu fbwiuegheruifbiqw ujhfbwdj iubfu iwebrfsadhdfs yiuhiyughfuie
-        buifv
-      </p>
-      <ProjectImage src={require("../img/portrait-cropped.jpeg")} />
+      <ProjectHeading>{props.heading}</ProjectHeading>
+      <p>{props.text}</p>
+      <ProjectImage src={props.img} />
     </ProjectContainer>
   );
 };

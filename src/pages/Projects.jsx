@@ -5,7 +5,13 @@ export const Projects = () => {
   return (
     <>
       <Header>Projects</Header>
-      <Project />
+      <Project
+        heading={"Gig Guide API"}
+        img={require("../img/gigs.png")}
+        text={
+          "An API that allows users to post gigs and watch artists and venues for upcoming shows"
+        }
+      />
     </>
   );
 };
