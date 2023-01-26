@@ -1,6 +1,6 @@
 import { Project } from "../components/Project";
 import { Header } from "../components/Header";
-import { Wrapper } from "../components/styled/Wrapper";
+import { Wrapper } from "../components/Wrapper";
 
 export const Projects = () => {
   return (
