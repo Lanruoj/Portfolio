@@ -13,7 +13,6 @@ function App() {
   const [menuVisible, setMenuVisible] = useState(false);
   const location = useLocation();
   const [windowSize, setWindowSize] = useState(window.innerWidth);
-  // const breakPoint = 620;
 
   useEffect(() => {
     const handleWindowResize = () => setWindowSize(window.innerWidth);

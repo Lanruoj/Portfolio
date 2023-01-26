@@ -24,7 +24,7 @@ export const Home = () => {
   ];
   return (
     <>
-      <Header>Overview</Header> : <Header>SMALL</Header>
+      <Header>Overview</Header>
       <ListCardWithLabels items={personalDetails} />
       <ListCardWithLabels items={techSkills} />
       <LocalLink to="/about" text="Learn more" />

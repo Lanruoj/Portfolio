@@ -7,7 +7,7 @@ const ProjectContainer = styled.article`
 `;
 
 const ProjectImage = styled.img`
-  max-width: 90%;
+  max-width: 400px;
   border-radius: 1rem;
   margin: 0.5rem;
 `;
