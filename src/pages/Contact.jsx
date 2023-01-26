@@ -96,7 +96,7 @@ export const Contact = () => {
   };
   return (
     <ContactDetails>
-      <h2>Email</h2>
+      {/* <h2>Email</h2> */}
       <EmailForm ref={form} onSubmit={sendEmail}>
         <ContactLink href="mailto:tanesamuelkaio@gmail.com">
           > tanesamuelkaio@gmail.com
