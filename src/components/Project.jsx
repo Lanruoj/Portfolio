@@ -17,11 +17,15 @@ const ProjectHeading = styled.h3`
   font-family: "Spline Sans Mono", monospace;
 `;
 
+const ProjectParagraph = styled.p`
+  max-width: 400px;
+`;
+
 export const Project = (props) => {
   return (
     <ProjectContainer>
       <ProjectHeading>{props.heading}</ProjectHeading>
-      <LargeParagraph>{props.text}</LargeParagraph>
+      <ProjectParagraph>{props.text}</ProjectParagraph>
       <a href={props.link} target="_blank">
         <ProjectImage src={props.img} />
       </a>
