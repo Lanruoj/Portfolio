@@ -1,8 +1,10 @@
 import { LocalLink } from "../components/LocalLink";
 import { ListCardWithLabels } from "../components/ListCardWithLabels";
 import { Header } from "../components/Header";
+import { useWindowSizeContext } from "../utils/WindowSizeContext";
 
 export const Home = () => {
+  const { windowSize } = useWindowSizeContext();
   const personalDetails = [
     { label: "Name", value: "Tāne Kaio" },
     { label: "Location", value: "Melbourne, Victoria, Australia" },
@@ -22,7 +24,7 @@ export const Home = () => {
   ];
   return (
     <>
-      <Header>Overview</Header>
+      <Header>Overview</Header> : <Header>SMALL</Header>
       <ListCardWithLabels items={personalDetails} />
       <ListCardWithLabels items={techSkills} />
       <LocalLink to="/about" text="Learn more" />
