@@ -14,6 +14,10 @@ export const Home = () => {
       label: "Education",
       value: "Diploma of Information Technology (Coder Academy)",
     },
+    {
+      label: "Experience",
+      value: "Junior",
+    },
   ];
   const techSkills = [
     { label: "Languages", value: "JavaScript / Python / HTML / CSS / SQL" },
