@@ -40,9 +40,9 @@ const MenuContainer = styled.ul`
   flex-direction: column;
   align-items: center;
   list-style: none;
-  width: 50vw;
+  width: 70vw;
   height: 100vh;
-  left: ${(props) => (props.menuVisible ? "0px" : "-50vw")};
+  left: ${(props) => (props.menuVisible ? "0px" : "-70vw")};
   transition: 0.5s;
 `;
 
