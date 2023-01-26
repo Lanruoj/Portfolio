@@ -1,13 +1,15 @@
 import { Header } from "../components/Header";
 import { Portrait } from "../components/styled/Portrait";
 import { LocalLink } from "../components/LocalLink";
+import { LargeParagraph } from "../components/styled/LargeParagraph";
+import { Wrapper } from "../components/styled/Wrapper";
 
 export const About = () => {
   return (
-    <>
+    <Wrapper>
       <Header>Who am I?</Header>
       <Portrait src={require("../img/portrait-cropped.jpeg")} />
-      <p>
+      <LargeParagraph>
         Hello!
         <br /> I'm Tāne and I'm a 27 year old web developer currently based in
         the lush surroundings of the foothills of the Dandenong Ranges in
@@ -18,8 +20,8 @@ export const About = () => {
         however I've already learned an immense amount of valuable practical
         lessons and industry specific knowledge which I can't wait to apply to
         the real world.
-      </p>
+      </LargeParagraph>
       <LocalLink to={"/projects"} text={"Projects"} />
-    </>
+    </Wrapper>
   );
 };
