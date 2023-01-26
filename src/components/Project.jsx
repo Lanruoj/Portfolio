@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { ExternalLink } from "./ExternalLink";
-import { LargeParagraph } from "./styled/LargeParagraph";
 
 const ProjectContainer = styled.div`
   border-radius: 1rem;
