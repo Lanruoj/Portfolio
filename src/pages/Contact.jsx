@@ -60,20 +60,6 @@ const SubmitButton = styled.input`
   font-family: "Spline Sans Mono", monospace;
 `;
 
-// const CallButton = styled.a`
-//   margin: 1rem;
-//   width: 10rem;
-//   height: 3rem;
-//   background-color: blue;
-//   border-radius: 0.3rem;
-//   border: none;
-//   color: white;
-//   font-size: 1.3rem;
-//   font-family: "Spline Sans Mono", monospace;
-//   text-decoration: none;
-//   line-height: 3rem;
-// `;
-
 export const Contact = () => {
   const form = useRef();
 
