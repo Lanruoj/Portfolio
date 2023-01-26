@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import logo from "../img/tane-trans.png";
 import squareLogo from "../img/ta-ne-logo.png";
 import { useMenuContext } from "../utils/MenuContext";
 import { Link } from "react-router-dom";
@@ -16,10 +15,9 @@ const NavContainer = styled.nav`
 
 const Logo = styled.img`
   position: fixed;
-  width: 4rem;
+  width: 4.5rem;
   right: 0;
   padding: 0.5rem;
-  /* visibility: hidden; */
 `;
 
 const Title = styled.h1`
@@ -73,9 +71,6 @@ export const NavBar = (props) => {
       <NavContainer>
         <MenuButton onClick={toggleMenu}>&gt;</MenuButton>
         <Logo src={squareLogo} />
-        {/* <Title>
-          <i>Tāne</i>
-        </Title> */}
       </NavContainer>
       <MenuContainer menuVisible={menuVisible && menuVisible}>
         <li>
