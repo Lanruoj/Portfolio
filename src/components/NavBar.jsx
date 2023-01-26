@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import logo from "../img/tane-trans.png";
+import squareLogo from "../img/ta-ne-logo.png";
 import { useMenuContext } from "../utils/MenuContext";
 import { Link } from "react-router-dom";
 
@@ -11,6 +12,14 @@ const NavContainer = styled.nav`
   height: 4rem;
   top: 0;
   z-index: 999;
+`;
+
+const Logo = styled.img`
+  position: fixed;
+  width: 4rem;
+  right: 0;
+  padding: 0.5rem;
+  /* visibility: hidden; */
 `;
 
 const Title = styled.h1`
@@ -46,11 +55,6 @@ const MenuContainer = styled.ul`
   transition: 0.5s;
 `;
 
-const Logo = styled.img`
-  padding: 0.5rem;
-  visibility: hidden;
-`;
-
 const MenuLink = styled(Link)`
   color: black;
   text-decoration: none;
@@ -68,7 +72,7 @@ export const NavBar = (props) => {
     <>
       <NavContainer>
         <MenuButton onClick={toggleMenu}>&gt;</MenuButton>
-        {/* <Logo src={logo} /> */}
+        <Logo src={squareLogo} />
         {/* <Title>
           <i>Tāne</i>
         </Title> */}
