@@ -1,5 +1,5 @@
 import { Header } from "../components/Header";
-import { Portrait } from "../components/styled/Portrait";
+import { Portrait } from "../components/Portrait";
 import { LocalLink } from "../components/LocalLink";
 import { LargeParagraph } from "../components/styled/LargeParagraph";
 import { Wrapper } from "../components/Wrapper";
@@ -9,7 +9,7 @@ export const About = () => {
     <>
       <Header>Who am I?</Header>
       <Wrapper>
-        <Portrait src={require("../img/portrait-cropped.jpeg")} />
+        <Portrait />
         <article>
           <LargeParagraph>
             Hello!
