@@ -8,7 +8,7 @@ const ListCardWithLabels = (props) => {
         <h2>{props.title}</h2>
         {props.items.map((item) => {
           return (
-            <ListItem>
+            <ListItem key={item.label}>
               {item.label ? <h3>{item.label}</h3> : null}
               {item.value}
             </ListItem>
