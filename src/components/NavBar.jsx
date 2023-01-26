@@ -20,21 +20,13 @@ const Logo = styled.img`
   padding: 0.5rem;
 `;
 
-// const Title = styled.h1`
-//   margin: 0;
-//   color: #2f2f2f;
-//   text-align: center;
-//   font-family: "Karla", sans-serif;
-//   font-size: 3rem;
-// `;
-
 const MenuButton = styled.button`
   position: absolute;
   background-color: rgba(255, 255, 255, 0);
   color: black;
   width: 3rem;
   border: none;
-  font-size: 3rem;
+  font-size: 4rem;
   align-self: center;
   left: 0.5rem;
   padding: 0;
