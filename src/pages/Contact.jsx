@@ -52,7 +52,7 @@ const SubmitButton = styled.input`
   margin: 1rem;
   width: 10rem;
   height: 3rem;
-  background-color: blue;
+  background-color: rgb(75, 0, 255);
   border-radius: 0.3rem;
   border: none;
   color: white;
