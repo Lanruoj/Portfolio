@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Portrait = styled.img`
-  max-width: 400px;
+  max-width: 90%;
   border-radius: 1rem;
 `;
 

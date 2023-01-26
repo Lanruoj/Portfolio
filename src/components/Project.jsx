@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ExternalLink } from "./ExternalLink";
+import { useWindowSizeContext } from "../utils/WindowSizeContext";
 
 const ProjectContainer = styled.div`
   border-radius: 1rem;
@@ -7,7 +8,7 @@ const ProjectContainer = styled.div`
 `;
 
 const ProjectImage = styled.img`
-  max-width: 400px;
+  max-width: ${(props) => (props.windowSize < 500 ? "100%" : "400px")};
   border-radius: 1rem;
   margin: 0.5rem;
 `;
@@ -21,12 +22,13 @@ const ProjectParagraph = styled.p`
 `;
 
 export const Project = (props) => {
+  const { windowSize } = useWindowSizeContext();
   return (
     <ProjectContainer>
       <ProjectHeading>{props.heading}</ProjectHeading>
       <ProjectParagraph>{props.text}</ProjectParagraph>
       <a href={props.link} target="_blank">
-        <ProjectImage src={props.img} />
+        <ProjectImage src={props.img} windowSize={windowSize} />
       </a>
       <ExternalLink to={props.link} text="GitHub" />
     </ProjectContainer>

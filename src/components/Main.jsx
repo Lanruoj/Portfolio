@@ -6,4 +6,5 @@ export const Main = styled.main`
   transition: 0.5s;
   padding: 1rem;
   text-align: center;
+  /* max-width: 100%; */
 `;
