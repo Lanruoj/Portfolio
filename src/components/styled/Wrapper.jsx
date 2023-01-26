@@ -4,7 +4,7 @@ import { useWindowSizeContext } from "../../utils/WindowSizeContext";
 const StyledWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   max-height: ${(props) => (props.windowSize > 800 ? "50vh" : "100%")};
   flex-wrap: wrap;
   align-items: center;
