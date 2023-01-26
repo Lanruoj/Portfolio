@@ -106,14 +106,14 @@ export const Contact = () => {
         <MessageField placeholder="Say hello!" name="message" />
         <SubmitButton type="submit" value="Send" />
       </EmailForm>
-      <PhoneForm>
+      {/* <PhoneForm>
         <ContactLink href="tel:+61466651820">
           <img
             src="https://w7.pngwing.com/pngs/356/440/png-transparent-iphone-computer-icons-telephone-email-telephone-electronics-text-mobile-phones.png"
             width="75px"
           />
         </ContactLink>
-      </PhoneForm>
+      </PhoneForm> */}
     </ContactDetails>
   );
 };
