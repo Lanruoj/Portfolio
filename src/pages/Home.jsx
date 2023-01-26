@@ -1,5 +1,6 @@
 import { LocalLink } from "../components/LocalLink";
 import { ListCardWithLabels } from "../components/ListCardWithLabels";
+import { Header } from "../components/Header";
 
 export const Home = () => {
   const personalDetails = [
@@ -21,6 +22,7 @@ export const Home = () => {
   ];
   return (
     <>
+      <Header>Overview</Header>
       <ListCardWithLabels items={personalDetails} />
       <ListCardWithLabels items={techSkills} />
       <LocalLink to="/about" text="Learn more" />
