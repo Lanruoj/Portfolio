@@ -71,6 +71,7 @@ const SubmitButton = styled.input`
   color: white;
   font-size: 1.3rem;
   font-family: "Spline Sans Mono", monospace;
+  cursor: pointer;
 `;
 
 export const Contact = () => {
