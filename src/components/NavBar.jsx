@@ -35,7 +35,7 @@ const MenuContainer = styled.ul`
 
 const menuButtonBounce = keyframes`
 0% { left: 0.5rem}
-50% {left: 1.5rem}
+50% {left: 1rem}
 75% { left: 0.5rem}
 100% {left: 0.5rem}
 `;
@@ -52,10 +52,10 @@ const MenuButton = styled.button`
   padding: 0;
   margin: 0;
   animation-name: ${menuButtonBounce};
-  animation-duration: 1s;
+  animation-duration: 0.8s;
   animation-iteration-count: 2;
   :hover {
-    left: 1.5rem;
+    left: 1rem;
   }
   transition: 0.2s ease-out;
 `;
