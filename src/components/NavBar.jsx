@@ -25,6 +25,7 @@ const MenuContainer = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Spline Sans Mono";
   list-style: none;
   width: 70vw;
   height: 100vh;
