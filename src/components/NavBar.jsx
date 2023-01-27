@@ -3,13 +3,6 @@ import squareLogo from "../img/ta-ne-logo.png";
 import { useMenuContext } from "../utils/MenuContext";
 import { Link } from "react-router-dom";
 
-const menuButtonBounce = keyframes`
-0% { left: 0.5rem}
-50% {left: 1.5rem}
-75% { left: 0.5rem}
-100% {left: 0.5rem}
-`;
-
 const NavContainer = styled.nav`
   position: fixed;
   display: flex;
@@ -27,6 +20,25 @@ const Logo = styled.img`
   padding: 0.5rem;
 `;
 
+const MenuContainer = styled.ul`
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  width: 70vw;
+  height: 100vh;
+  left: ${(props) => (props.menuVisible ? "0px" : "-70vw")};
+  transition: 0.5s;
+`;
+
+const menuButtonBounce = keyframes`
+0% { left: 0.5rem}
+50% {left: 1.5rem}
+75% { left: 0.5rem}
+100% {left: 0.5rem}
+`;
+
 const MenuButton = styled.button`
   position: absolute;
   background-color: rgba(255, 255, 255, 0);
@@ -41,18 +53,10 @@ const MenuButton = styled.button`
   animation-name: ${menuButtonBounce};
   animation-duration: 1s;
   animation-iteration-count: 2;
-`;
-
-const MenuContainer = styled.ul`
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-  width: 70vw;
-  height: 100vh;
-  left: ${(props) => (props.menuVisible ? "0px" : "-70vw")};
-  transition: 0.5s;
+  :hover {
+    left: 1.5rem;
+  }
+  transition: 0.2s ease-out;
 `;
 
 const MenuLink = styled(Link)`
