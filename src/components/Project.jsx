@@ -27,7 +27,7 @@ export const Project = (props) => {
     <ProjectContainer>
       <ProjectHeading>{props.heading}</ProjectHeading>
       <ProjectParagraph>{props.text}</ProjectParagraph>
-      <a href={props.link} target="_blank">
+      <a href={props.link} target="_blank" rel="noreferrer">
         <ProjectImage src={props.img} windowSize={windowSize} />
       </a>
       <ExternalLink to={props.link} text="GitHub" />

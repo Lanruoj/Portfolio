@@ -137,19 +137,35 @@ export const NavBar = (props) => {
           windowSize={windowSize}
         >
           <ContactLink href="tel:+61466651820" target="_blank">
-            <img src={require("../img/phone-logo.png")} width="50px" />
+            <img
+              src={require("../img/phone-logo.png")}
+              width="50px"
+              alt="Phone"
+            />
           </ContactLink>
           <ContactLink href="mailto:tanesamuelkaio@gmail.com" target="_blank">
-            <img src={require("../img/email-logo.png")} width="50px" />
+            <img
+              src={require("../img/email-logo.png")}
+              width="50px"
+              alt="Email"
+            />
           </ContactLink>
           <ContactLink href="https://github.com/Lanruoj" target="_blank">
-            <img src={require("../img/github-mark.png")} width="50px" />
+            <img
+              src={require("../img/github-mark.png")}
+              width="50px"
+              alt="GitHub"
+            />
           </ContactLink>
           <ContactLink
             href="https://www.linkedin.com/in/tane-kaio/"
             target="_blank"
           >
-            <img src={require("../img/li-logo.png")} height="50px" />
+            <img
+              src={require("../img/li-logo.png")}
+              height="50px"
+              alt="LinkedIn"
+            />
           </ContactLink>
         </LogoForm>
       </MenuContainer>

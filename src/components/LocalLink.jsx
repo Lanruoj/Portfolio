@@ -25,7 +25,7 @@ const StyledLink = styled(Link)`
 `;
 
 const LocalLink = (props) => {
-  return <StyledLink to={props.to}>{props.text} </StyledLink>;
+  return <StyledLink to={props.to}>{props.text}</StyledLink>;
 };
 
 export { LocalLink };
