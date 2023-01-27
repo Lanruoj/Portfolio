@@ -7,16 +7,16 @@ const StyledLink = styled.a`
   color: black;
   text-align: center;
   font-style: italic;
-  text-decoration: none;
   ::before {
-    content: ">";
+    content: ">\u00A0";
+    text-decoration: underline;
     display: inline-block;
     position: relative;
-    left: -0.5rem;
+    left: 0;
     transition: 0.2s;
   }
   :hover::before {
-    left: 0;
+    left: 0.5rem;
   }
 `;
 
