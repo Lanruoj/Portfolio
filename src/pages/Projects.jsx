@@ -1,6 +1,7 @@
 import { Project } from "../components/Project";
 import { Header } from "../components/Header";
 import { Wrapper } from "../components/Wrapper";
+import { LocalLink } from "../components/LocalLink";
 
 export const Projects = () => {
   return (
@@ -36,6 +37,7 @@ export const Projects = () => {
           link={"https://github.com/Lanruoj/Lanruoj.github.io?"}
         />
       </Wrapper>
+      <LocalLink to={"/contact"} text={"Contact"} />
     </>
   );
 };

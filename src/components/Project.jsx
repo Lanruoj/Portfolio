@@ -30,7 +30,6 @@ export const Project = (props) => {
       <a href={props.link} target="_blank" rel="noreferrer">
         <GithubLogo src={githubLogo} windowSize={windowSize} />
       </a>
-      {/* <ExternalLink to={props.link} text="GitHub" /> */}
     </ProjectContainer>
   );
 };
