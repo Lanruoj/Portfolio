@@ -64,6 +64,13 @@ const MenuLink = styled(Link)`
   color: black;
   text-decoration: none;
   font-size: 3rem;
+  :hover {
+    text-decoration: underline;
+    font-style: italic;
+  }
+  :hover::before {
+    content: ">";
+  }
 `;
 
 export const NavBar = (props) => {
