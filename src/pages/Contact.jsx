@@ -10,15 +10,6 @@ const ContactDetails = styled.address`
   max-width: 800px;
 `;
 
-const ContactLink = styled.a`
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  display: block;
-  color: #343434;
-  font-family: "Spline Sans Mono", monospace;
-`;
-
 const EmailForm = styled.form`
   display: flex;
   flex-direction: ${(props) => (props.windowSize > 800 ? "column" : "column")};
@@ -32,14 +23,6 @@ const NameAndEmailInput = styled.div`
   justify-content: space-between;
   align-items: center;
   max-width: ${(props) => (props.windowSize > 800 ? "400px" : "90%")};
-`;
-
-const LogoForm = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 1rem;
 `;
 
 const MessageField = styled.textarea`
@@ -129,20 +112,6 @@ export const Contact = () => {
               <SubmitButton type="submit">Send</SubmitButton>
             </div>
           </EmailForm>
-          <LogoForm>
-            <ContactLink href="tel:+61466651820" target="_blank">
-              <img src={require("../img/phone-logo.png")} width="75px" />
-            </ContactLink>
-            <ContactLink href="https://github.com/Lanruoj" target="_blank">
-              <img src={require("../img/github-mark.png")} width="75px" />
-            </ContactLink>
-            <ContactLink
-              href="https://www.linkedin.com/in/tane-kaio/"
-              target="_blank"
-            >
-              <img src={require("../img/li-logo.png")} height="70px" />
-            </ContactLink>
-          </LogoForm>
         </ContactDetails>
       </Wrapper>
     </>

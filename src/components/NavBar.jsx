@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import squareLogo from "../img/ta-ne-logo.png";
 import { useMenuContext } from "../utils/MenuContext";
+import { useWindowSizeContext } from "../utils/WindowSizeContext";
 import { Link } from "react-router-dom";
 
 const NavContainer = styled.nav`
@@ -74,8 +75,30 @@ const MenuLink = styled(Link)`
   }
 `;
 
+const LogoForm = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  left: ${(props) => (props.menuVisible ? "0px" : "-70vw")};
+  width: ${(props) => (props.windowSize > 800 ? "400px" : "min-content")};
+  top: 20rem;
+  transition: 0.5s;
+`;
+
+const ContactLink = styled.a`
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  color: #343434;
+  font-family: "Spline Sans Mono", monospace;
+`;
+
 export const NavBar = (props) => {
   const { menuVisible, setMenuVisible } = useMenuContext();
+  const { windowSize } = useWindowSizeContext();
   const toggleMenu = () => {
     menuVisible ? setMenuVisible(false) : setMenuVisible(true);
   };
@@ -108,6 +131,23 @@ export const NavBar = (props) => {
             {urlPath === "/contact" ? <s>Contact</s> : "Contact"}
           </MenuLink>
         </li>
+        <LogoForm
+          menuVisible={menuVisible && menuVisible}
+          windowSize={windowSize}
+        >
+          <ContactLink href="tel:+61466651820" target="_blank">
+            <img src={require("../img/phone-logo.png")} width="75px" />
+          </ContactLink>
+          <ContactLink href="https://github.com/Lanruoj" target="_blank">
+            <img src={require("../img/github-mark.png")} width="75px" />
+          </ContactLink>
+          <ContactLink
+            href="https://www.linkedin.com/in/tane-kaio/"
+            target="_blank"
+          >
+            <img src={require("../img/li-logo.png")} height="70px" />
+          </ContactLink>
+        </LogoForm>
       </MenuContainer>
     </>
   );
