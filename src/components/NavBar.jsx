@@ -1,7 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import squareLogo from "../img/ta-ne-logo.png";
 import { useMenuContext } from "../utils/MenuContext";
 import { Link } from "react-router-dom";
+
+const menuButtonBounce = keyframes`
+0% { left: 0.5rem}
+50% {left: 1.5rem}
+75% { left: 0.5rem}
+100% {left: 0.5rem}
+`;
 
 const NavContainer = styled.nav`
   position: fixed;
@@ -31,6 +38,9 @@ const MenuButton = styled.button`
   left: 0.5rem;
   padding: 0;
   margin: 0;
+  animation-name: ${menuButtonBounce};
+  animation-duration: 1s;
+  animation-iteration-count: 2;
 `;
 
 const MenuContainer = styled.ul`
