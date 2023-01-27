@@ -6,12 +6,12 @@ import { useWindowSizeContext } from "../utils/WindowSizeContext";
 import { Wrapper } from "../components/Wrapper";
 
 const ContactDetails = styled.address`
-  /* display: block; */
   font-style: normal;
   max-width: 800px;
 `;
 
 const ContactLink = styled.a`
+  display: block;
   text-decoration: none;
   text-align: center;
   display: block;
@@ -21,9 +21,17 @@ const ContactLink = styled.a`
 
 const EmailForm = styled.form`
   display: flex;
-  flex-direction: ${(props) => (props.windowSize > 800 ? "row" : "column")};
+  flex-direction: ${(props) => (props.windowSize > 800 ? "column" : "column")};
   align-items: center;
   width: ${(props) => (props.windowSize > 800 ? "800px" : "90vw")};
+`;
+
+const NameAndEmailInput = styled.div`
+  display: flex;
+  flex-direction: ${(props) => (props.windowSize > 800 ? "row" : "column")};
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
 `;
 
 const LogoForm = styled.div`
@@ -37,7 +45,7 @@ const LogoForm = styled.div`
 const MessageField = styled.textarea`
   margin: 1rem;
   height: 10rem;
-  width: 90%;
+  width: ${(props) => (props.windowSize > 800 ? "900px" : "90%")};
   font-family: "Spline Sans Mono", monospace;
   font-size: 1rem;
   text-align: center;
@@ -94,10 +102,18 @@ export const Contact = () => {
       <Wrapper>
         <ContactDetails>
           <EmailForm ref={form} onSubmit={sendEmail} windowSize={windowSize}>
-            <Input type="text" name="user_name" placeholder="Name" />
-            <Input type="email" name="user_email" placeholder="Email address" />
-            <MessageField placeholder="Say hello!" name="message" />
-            <SubmitButton type="submit" value="Send" />
+            <NameAndEmailInput>
+              <Input type="text" name="user_name" placeholder="Name" />
+              <Input
+                type="email"
+                name="user_email"
+                placeholder="Email address"
+              />
+            </NameAndEmailInput>
+            <div>
+              <MessageField placeholder="Say hello!" name="message" />
+              <SubmitButton type="submit" value="Send" />
+            </div>
           </EmailForm>
           <LogoForm>
             <ContactLink href="tel:+61466651820" target="_blank">
