@@ -31,7 +31,7 @@ const NameAndEmailInput = styled.div`
   flex-direction: ${(props) => (props.windowSize > 800 ? "row" : "column")};
   justify-content: space-between;
   align-items: center;
-  width: 400px;
+  max-width: ${(props) => (props.windowSize > 800 ? "400px" : "90%")};
 `;
 
 const LogoForm = styled.div`
@@ -102,7 +102,7 @@ export const Contact = () => {
       <Wrapper>
         <ContactDetails>
           <EmailForm ref={form} onSubmit={sendEmail} windowSize={windowSize}>
-            <NameAndEmailInput>
+            <NameAndEmailInput windowSize={windowSize}>
               <Input type="text" name="user_name" placeholder="Name" />
               <Input
                 type="email"
