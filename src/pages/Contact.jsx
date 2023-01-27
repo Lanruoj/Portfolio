@@ -2,9 +2,13 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
 import { Header } from "../components/Header";
+import { useWindowSizeContext } from "../utils/WindowSizeContext";
+import { Wrapper } from "../components/Wrapper";
 
 const ContactDetails = styled.address`
+  /* display: block; */
   font-style: normal;
+  max-width: 800px;
 `;
 
 const ContactLink = styled.a`
@@ -17,8 +21,9 @@ const ContactLink = styled.a`
 
 const EmailForm = styled.form`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${(props) => (props.windowSize > 800 ? "row" : "column")};
   align-items: center;
+  width: ${(props) => (props.windowSize > 800 ? "800px" : "90vw")};
 `;
 
 const LogoForm = styled.div`
@@ -61,6 +66,7 @@ const SubmitButton = styled.input`
 `;
 
 export const Contact = () => {
+  const { windowSize } = useWindowSizeContext();
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -85,28 +91,30 @@ export const Contact = () => {
   return (
     <>
       <Header>Contact me</Header>
-      <ContactDetails>
-        <EmailForm ref={form} onSubmit={sendEmail}>
-          <Input type="text" name="user_name" placeholder="Name" />
-          <Input type="email" name="user_email" placeholder="Email address" />
-          <MessageField placeholder="Say hello!" name="message" />
-          <SubmitButton type="submit" value="Send" />
-        </EmailForm>
-        <LogoForm>
-          <ContactLink href="tel:+61466651820" target="_blank">
-            <img src={require("../img/phone-logo.png")} width="75px" />
-          </ContactLink>
-          <ContactLink href="https://github.com/Lanruoj" target="_blank">
-            <img src={require("../img/github-mark.png")} width="75px" />
-          </ContactLink>
-          <ContactLink
-            href="https://www.linkedin.com/in/tane-kaio/"
-            target="_blank"
-          >
-            <img src={require("../img/li-logo.png")} height="70px" />
-          </ContactLink>
-        </LogoForm>
-      </ContactDetails>
+      <Wrapper>
+        <ContactDetails>
+          <EmailForm ref={form} onSubmit={sendEmail} windowSize={windowSize}>
+            <Input type="text" name="user_name" placeholder="Name" />
+            <Input type="email" name="user_email" placeholder="Email address" />
+            <MessageField placeholder="Say hello!" name="message" />
+            <SubmitButton type="submit" value="Send" />
+          </EmailForm>
+          <LogoForm>
+            <ContactLink href="tel:+61466651820" target="_blank">
+              <img src={require("../img/phone-logo.png")} width="75px" />
+            </ContactLink>
+            <ContactLink href="https://github.com/Lanruoj" target="_blank">
+              <img src={require("../img/github-mark.png")} width="75px" />
+            </ContactLink>
+            <ContactLink
+              href="https://www.linkedin.com/in/tane-kaio/"
+              target="_blank"
+            >
+              <img src={require("../img/li-logo.png")} height="70px" />
+            </ContactLink>
+          </LogoForm>
+        </ContactDetails>
+      </Wrapper>
     </>
   );
 };
