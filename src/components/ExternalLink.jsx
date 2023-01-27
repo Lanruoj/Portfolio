@@ -5,14 +5,25 @@ const StyledLink = styled.a`
   font-family: "Spline Sans Mono", sans-serif;
   font-size: 1.5rem;
   color: black;
-  text-decoration: underline;
   text-align: center;
+  font-style: italic;
+  text-decoration: none;
+  ::before {
+    content: ">";
+    display: inline-block;
+    position: relative;
+    left: -0.5rem;
+    transition: 0.2s;
+  }
+  :hover::before {
+    left: 0;
+  }
 `;
 
 const ExternalLink = (props) => {
   return (
     <StyledLink href={props.to} target="_blank">
-      &gt; <i>{props.text}</i>{" "}
+      {props.text}{" "}
     </StyledLink>
   );
 };
