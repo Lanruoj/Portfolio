@@ -13,10 +13,10 @@ export const About = () => {
         <article>
           <LargeParagraph>
             Hello!
-            <br /> I'm Tāne and I'm a 27 year old web developer currently based
-            in the lush surroundings of the foothills of the Dandenong Ranges in
-            Melbourne, Victoria. As a student of Web Development at Coder
-            Academy I spend most of my time learning and practising code,
+            <br /> I'm Tāne and I'm a 27 year old junior web developer currently
+            based in the lush surroundings of the foothills of the Dandenong
+            Ranges in Melbourne, Victoria. As a student of Web Development at
+            Coder Academy I spend most of my time learning and practising code,
             sharpening my problem solving skills and learning more about the
             world of technology. My adventure into the land of coding may not
             have started long ago, however I've already learned an immense
