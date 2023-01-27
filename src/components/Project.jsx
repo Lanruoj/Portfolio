@@ -1,16 +1,16 @@
 import styled from "styled-components";
 import { ExternalLink } from "./ExternalLink";
 import { useWindowSizeContext } from "../utils/WindowSizeContext";
+import githubLogo from "../img/github-mark.png";
 
 const ProjectContainer = styled.div`
   border-radius: 1rem;
-  padding: 1rem;
+  padding-top: 1rem;
 `;
 
-const ProjectImage = styled.img`
-  max-width: ${(props) => (props.windowSize < 500 ? "100%" : "400px")};
-  border-radius: 1rem;
-  margin: 0.5rem;
+const GithubLogo = styled.img`
+  margin: 1rem;
+  width: 50px;
 `;
 
 const ProjectHeading = styled.h3`
@@ -28,9 +28,9 @@ export const Project = (props) => {
       <ProjectHeading>{props.heading}</ProjectHeading>
       <ProjectParagraph>{props.text}</ProjectParagraph>
       <a href={props.link} target="_blank" rel="noreferrer">
-        <ProjectImage src={props.img} windowSize={windowSize} />
+        <GithubLogo src={githubLogo} windowSize={windowSize} />
       </a>
-      <ExternalLink to={props.link} text="GitHub" />
+      {/* <ExternalLink to={props.link} text="GitHub" /> */}
     </ProjectContainer>
   );
 };

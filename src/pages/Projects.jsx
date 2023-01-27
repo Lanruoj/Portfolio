@@ -9,7 +9,6 @@ export const Projects = () => {
       <Wrapper>
         <Project
           heading={"Mental Health Journal API"}
-          // img={require("../img/gigs.png")}
           text={
             "An API that allows users to post their daily mood and mental health report, with the ability to share amongst approved friends"
           }
@@ -17,7 +16,6 @@ export const Projects = () => {
         />
         <Project
           heading={"Gig Guide API"}
-          // img={require("../img/gigs.png")}
           text={
             "An API that allows users to post gigs and watch artists and venues for upcoming shows"
           }
@@ -25,7 +23,6 @@ export const Projects = () => {
         />
         <Project
           heading={"Task Manager"}
-          // img={require("../img/todo_scr.png")}
           text={
             "A to-do list CLI application where you can add tasks with an optional deadline time, mark tasks as done, delete tasks, view completed tasks and more"
           }
@@ -33,7 +30,6 @@ export const Projects = () => {
         />
         <Project
           heading={"Portfolio (old)"}
-          // img={require("../img/portfolio-scr.png")}
           text={
             "My portfolio site using purely HTML & CSS/SCSS built during my first few months of learning to code"
           }
