@@ -54,6 +54,7 @@ const MenuButton = styled.button`
   animation-name: ${menuButtonBounce};
   animation-duration: 0.8s;
   animation-iteration-count: 2;
+  cursor: pointer;
   :hover {
     left: 1rem;
   }

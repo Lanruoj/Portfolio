@@ -61,27 +61,30 @@ const Input = styled.input`
   text-align: center;
 `;
 
-const SubmitButton = styled.input`
-  margin: 1rem;
-  width: 10rem;
-  height: 3rem;
-  border-radius: 0.3rem;
+const SubmitButton = styled.button`
+  display: inline-block;
+  padding: 0 1rem 1rem 1rem;
+  margin-top: 0;
+  font-family: "Spline Sans Mono", sans-serif;
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+  font-style: italic;
+  text-decoration: underline;
   border: none;
-  color: white;
-  font-size: 1.3rem;
-  font-family: "Spline Sans Mono", monospace;
-  cursor: pointer;
-  background-image: linear-gradient(
-    to right,
-    rgb(116, 56, 255),
-    rgb(75, 0, 255)
-  );
-  background-size: 200% 100%;
-  background-position: 100% 0;
-  transition: 0.3s;
-  :hover {
-    background-position: 0 0;
+  background-color: transparent;
+  ::before {
+    content: ">\u00A0";
+    text-decoration: underline;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    transition: 0.2s;
   }
+  :hover::before {
+    left: 0.5rem;
+  }
+  cursor: pointer;
 `;
 
 export const Contact = () => {
@@ -123,7 +126,7 @@ export const Contact = () => {
             </NameAndEmailInput>
             <div>
               <MessageField placeholder="Say hello!" name="message" />
-              <SubmitButton type="submit" value="Send" />
+              <SubmitButton type="submit">Send</SubmitButton>
             </div>
           </EmailForm>
           <LogoForm>
