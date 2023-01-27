@@ -65,13 +65,23 @@ const SubmitButton = styled.input`
   margin: 1rem;
   width: 10rem;
   height: 3rem;
-  background-color: rgb(75, 0, 255);
   border-radius: 0.3rem;
   border: none;
   color: white;
   font-size: 1.3rem;
   font-family: "Spline Sans Mono", monospace;
   cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    rgb(116, 56, 255),
+    rgb(75, 0, 255)
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: 0.3s;
+  :hover {
+    background-position: 0 0;
+  }
 `;
 
 export const Contact = () => {
