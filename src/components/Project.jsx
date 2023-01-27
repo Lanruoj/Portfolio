@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ExternalLink } from "./ExternalLink";
 import { useWindowSizeContext } from "../utils/WindowSizeContext";
 import githubLogo from "../img/github-mark.png";
 
