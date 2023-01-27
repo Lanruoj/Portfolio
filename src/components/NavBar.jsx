@@ -28,9 +28,10 @@ const MenuContainer = styled.ul`
   align-items: center;
   font-family: "Spline Sans Mono";
   list-style: none;
-  width: 70vw;
+  width: ${(props) => (props.windowSize > 800 ? "-600px" : "70vw")};
   height: 100vh;
-  left: ${(props) => (props.menuVisible ? "0px" : "-70vw")};
+  left: ${(props) =>
+    props.menuVisible ? "0px" : props.windowSize > 800 ? "-600px" : "-70vw"};
   transition: 0.5s;
 `;
 
@@ -81,7 +82,8 @@ const LogoForm = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 1rem;
-  left: ${(props) => (props.menuVisible ? "0px" : "-70vw")};
+  left: ${(props) =>
+    props.menuVisible ? "0px" : props.windowSize > 800 ? "-600px" : "-70vw"};
   width: ${(props) => (props.windowSize > 800 ? "400px" : "min-content")};
   top: 20rem;
   transition: 0.5s;
@@ -111,7 +113,10 @@ export const NavBar = (props) => {
         <MenuButton onClick={toggleMenu}>&gt;</MenuButton>
         <Logo src={squareLogo} />
       </NavContainer>
-      <MenuContainer menuVisible={menuVisible && menuVisible}>
+      <MenuContainer
+        menuVisible={menuVisible && menuVisible}
+        windowSize={windowSize}
+      >
         <li>
           <MenuLink to="/" id="home" onClick={toggleMenu}>
             {urlPath === "/" ? <s>Home</s> : "Home"}

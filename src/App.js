@@ -24,7 +24,10 @@ function App() {
       <WindowSizeContext.Provider value={{ windowSize }}>
         <MenuContext.Provider value={{ menuVisible, setMenuVisible }}>
           <NavBar location={location} />
-          <Main menuVisible={menuVisible ? true : false}>
+          <Main
+            menuVisible={menuVisible ? true : false}
+            windowSize={windowSize}
+          >
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
