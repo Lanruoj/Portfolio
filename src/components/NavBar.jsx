@@ -88,6 +88,7 @@ const LogoForm = styled.div`
 `;
 
 const ContactLink = styled.a`
+  margin: 0 0.5rem 0 0.5rem;
   display: block;
   text-decoration: none;
   text-align: center;
@@ -136,16 +137,19 @@ export const NavBar = (props) => {
           windowSize={windowSize}
         >
           <ContactLink href="tel:+61466651820" target="_blank">
-            <img src={require("../img/phone-logo.png")} width="75px" />
+            <img src={require("../img/phone-logo.png")} width="50px" />
+          </ContactLink>
+          <ContactLink href="mailto:tanesamuelkaio@gmail.com" target="_blank">
+            <img src={require("../img/email-logo.png")} width="50px" />
           </ContactLink>
           <ContactLink href="https://github.com/Lanruoj" target="_blank">
-            <img src={require("../img/github-mark.png")} width="75px" />
+            <img src={require("../img/github-mark.png")} width="50px" />
           </ContactLink>
           <ContactLink
             href="https://www.linkedin.com/in/tane-kaio/"
             target="_blank"
           >
-            <img src={require("../img/li-logo.png")} height="70px" />
+            <img src={require("../img/li-logo.png")} height="50px" />
           </ContactLink>
         </LogoForm>
       </MenuContainer>
