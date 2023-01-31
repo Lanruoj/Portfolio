@@ -66,7 +66,7 @@ const MenuButton = styled.button`
 const MenuLink = styled(Link)`
   color: black;
   text-decoration: none;
-  font-size: 3rem;
+  font-size: ${(props) => (props.windowSize < 360 ? "2rem" : "3rem")};
   :hover {
     text-decoration: underline;
     font-style: italic;
@@ -118,22 +118,42 @@ export const NavBar = (props) => {
         windowSize={windowSize}
       >
         <li>
-          <MenuLink to="/" id="home" onClick={toggleMenu}>
+          <MenuLink
+            to="/"
+            id="home"
+            onClick={toggleMenu}
+            windowSize={windowSize}
+          >
             {urlPath === "/" ? <s>Home</s> : "Home"}
           </MenuLink>
         </li>
         <li>
-          <MenuLink to="/about" id="about" onClick={toggleMenu}>
+          <MenuLink
+            to="/about"
+            id="about"
+            onClick={toggleMenu}
+            windowSize={windowSize}
+          >
             {urlPath === "/about" ? <s>About</s> : "About"}
           </MenuLink>
         </li>
         <li>
-          <MenuLink to="/projects" id="projects" onClick={toggleMenu}>
+          <MenuLink
+            to="/projects"
+            id="projects"
+            onClick={toggleMenu}
+            windowSize={windowSize}
+          >
             {urlPath === "/projects" ? <s>Projects</s> : "Projects"}
           </MenuLink>
         </li>
         <li>
-          <MenuLink to="/contact" id="contact" onClick={toggleMenu}>
+          <MenuLink
+            to="/contact"
+            id="contact"
+            onClick={toggleMenu}
+            windowSize={windowSize}
+          >
             {urlPath === "/contact" ? <s>Contact</s> : "Contact"}
           </MenuLink>
         </li>
