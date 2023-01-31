@@ -7,14 +7,13 @@ import { Wrapper } from "../components/Wrapper";
 
 const ContactDetails = styled.address`
   font-style: normal;
-  max-width: 800px;
+  max-width: ${(props) => (props.windowSize > 800 ? "30rem" : "90vw")};
 `;
 
 const EmailForm = styled.form`
   display: flex;
   flex-direction: ${(props) => (props.windowSize > 800 ? "column" : "column")};
   align-items: center;
-  width: ${(props) => (props.windowSize > 800 ? "800px" : "90vw")};
 `;
 
 const NameAndEmailInput = styled.div`
@@ -22,13 +21,16 @@ const NameAndEmailInput = styled.div`
   flex-direction: ${(props) => (props.windowSize > 800 ? "row" : "column")};
   justify-content: space-between;
   align-items: center;
-  max-width: ${(props) => (props.windowSize > 800 ? "400px" : "90%")};
+`;
+
+const MessageAndSubmit = styled.div`
+  width: ${(props) => (props.windowSize > 800 ? "30.5rem" : "90%")};
 `;
 
 const MessageField = styled.textarea`
   margin: 1rem;
   height: 10rem;
-  width: ${(props) => (props.windowSize > 800 ? "900px" : "90%")};
+  width: ${(props) => (props.windowSize > 800 ? "100%" : "90%")};
   font-family: "Spline Sans Mono", monospace;
   font-size: 1rem;
   text-align: center;
@@ -107,10 +109,10 @@ export const Contact = () => {
                 placeholder="Email address"
               />
             </NameAndEmailInput>
-            <div>
+            <MessageAndSubmit windowSize={windowSize}>
               <MessageField placeholder="Say hello!" name="message" />
               <SubmitButton type="submit">Send</SubmitButton>
-            </div>
+            </MessageAndSubmit>
           </EmailForm>
         </ContactDetails>
       </Wrapper>
