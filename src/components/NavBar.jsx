@@ -28,10 +28,10 @@ const MenuContainer = styled.ul`
   align-items: center;
   font-family: "Spline Sans Mono";
   list-style: none;
-  width: ${(props) => (props.windowSize > 800 ? "-600px" : "70vw")};
+  width: ${(props) => (props.windowSize > 800 ? "-37.5rem" : "70vw")};
   height: 100vh;
   left: ${(props) =>
-    props.menuVisible ? "0px" : props.windowSize > 800 ? "-600px" : "-70vw"};
+    props.menuVisible ? "0px" : props.windowSize > 800 ? "-37.5rem" : "-70vw"};
   transition: 0.5s;
 `;
 
@@ -83,8 +83,8 @@ const LogoForm = styled.div`
   align-items: center;
   margin: 1rem;
   left: ${(props) =>
-    props.menuVisible ? "0px" : props.windowSize > 800 ? "-600px" : "-70vw"};
-  width: ${(props) => (props.windowSize > 800 ? "400px" : "min-content")};
+    props.menuVisible ? "0px" : props.windowSize > 800 ? "-37.5rem" : "-70vw"};
+  width: ${(props) => (props.windowSize > 800 ? "20rem" : "min-content")};
   top: 20rem;
   transition: 0.5s;
 `;
