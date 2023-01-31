@@ -68,7 +68,6 @@ const MenuLink = styled(Link)`
   text-decoration: none;
   font-size: ${(props) => (props.windowSize < 360 ? "2rem" : "2.5rem")};
   :hover {
-    text-decoration: underline;
     font-style: italic;
   }
   :hover::before {
