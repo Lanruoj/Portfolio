@@ -66,7 +66,7 @@ const MenuButton = styled.button`
 const MenuLink = styled(Link)`
   color: black;
   text-decoration: none;
-  font-size: ${(props) => (props.windowSize < 360 ? "2rem" : "3rem")};
+  font-size: ${(props) => (props.windowSize < 360 ? "2rem" : "2.5rem")};
   :hover {
     text-decoration: underline;
     font-style: italic;
