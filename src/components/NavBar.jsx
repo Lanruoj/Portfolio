@@ -80,11 +80,12 @@ const LogoForm = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   margin: 1rem;
   left: ${(props) =>
     props.menuVisible ? "0px" : props.windowSize > 800 ? "-37.5rem" : "-70vw"};
-  width: ${(props) => (props.windowSize > 800 ? "20rem" : "min-content")};
+  width: ${(props) => (props.windowSize < 360 ? "min-content" : "18rem")};
   top: 20rem;
   transition: 0.5s;
 `;
