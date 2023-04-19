@@ -162,7 +162,11 @@ const MenuContainer = styled.ul`
   width: ${(props) => (props.windowSize > 800 ? "-37.5rem" : "70vw")};
   height: 100vh;
   left: ${(props) =>
-    props.menuVisible ? "0px" : props.windowSize > 800 ? "-37.5rem" : "-70vw"};
+    props.menuVisible || props.windowSize > 1200
+      ? "0px"
+      : props.windowSize > 800
+      ? "-37.5rem"
+      : "-70vw"};
   transition: 0.5s;
 `;
 
