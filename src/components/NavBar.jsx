@@ -15,7 +15,10 @@ export const NavBar = (props) => {
   return (
     <NavWrapper>
       <NavContainer>
-        <MenuButton onClick={toggleMenu} windowSize={windowSize}>
+        <MenuButton
+          onClick={windowSize < 1200 ? toggleMenu : null}
+          windowSize={windowSize}
+        >
           &gt;
         </MenuButton>
         <Logo src={squareLogo} />
@@ -28,7 +31,7 @@ export const NavBar = (props) => {
           <MenuLink
             to="/"
             id="home"
-            onClick={toggleMenu}
+            onClick={windowSize < 1200 ? toggleMenu : null}
             windowSize={windowSize}
           >
             {urlPath === "/" ? <s>Home</s> : "Home"}
@@ -38,7 +41,7 @@ export const NavBar = (props) => {
           <MenuLink
             to="/about"
             id="about"
-            onClick={toggleMenu}
+            onClick={windowSize < 1200 ? toggleMenu : null}
             windowSize={windowSize}
           >
             {urlPath === "/about" ? <s>About</s> : "About"}
@@ -48,7 +51,7 @@ export const NavBar = (props) => {
           <MenuLink
             to="/projects"
             id="projects"
-            onClick={toggleMenu}
+            onClick={windowSize < 1200 ? toggleMenu : null}
             windowSize={windowSize}
           >
             {urlPath === "/projects" ? <s>Projects</s> : "Projects"}
@@ -58,7 +61,7 @@ export const NavBar = (props) => {
           <MenuLink
             to="/contact"
             id="contact"
-            onClick={toggleMenu}
+            onClick={windowSize < 1200 ? toggleMenu : null}
             windowSize={windowSize}
           >
             {urlPath === "/contact" ? <s>Contact</s> : "Contact"}
@@ -69,34 +72,34 @@ export const NavBar = (props) => {
           windowSize={windowSize}
         >
           <ContactLink href="tel:+61466651820" target="_blank">
-            <img
+            <ContactLinkImg
               src={require("../img/phone-logo.png")}
-              width="50px"
               alt="Phone"
+              windowSize={windowSize}
             />
           </ContactLink>
           <ContactLink href="mailto:tanesamuelkaio@gmail.com" target="_blank">
-            <img
+            <ContactLinkImg
               src={require("../img/email-logo.png")}
-              width="50px"
               alt="Email"
+              windowSize={windowSize}
             />
           </ContactLink>
           <ContactLink href="https://github.com/Lanruoj" target="_blank">
-            <img
+            <ContactLinkImg
               src={require("../img/github-mark.png")}
-              width="50px"
               alt="GitHub"
+              windowSize={windowSize}
             />
           </ContactLink>
           <ContactLink
             href="https://www.linkedin.com/in/tane-kaio/"
             target="_blank"
           >
-            <img
+            <ContactLinkImg
               src={require("../img/li-logo.png")}
-              height="50px"
               alt="LinkedIn"
+              windowSize={windowSize}
             />
           </ContactLink>
         </LogoForm>
@@ -174,7 +177,7 @@ const MenuLink = styled(Link)`
   color: black;
   text-decoration: none;
   font-style: italic;
-  font-size: ${(props) => (props.windowSize < 360 ? "2rem" : "2.5rem")};
+  font-size: ${(props) => (props.windowSize < 800 ? "2rem" : "1.5rem")};
   :hover::before {
     content: ">";
   }
@@ -202,4 +205,8 @@ const ContactLink = styled.a`
   display: block;
   color: #343434;
   font-family: "Spline Sans Mono", monospace;
+`;
+
+const ContactLinkImg = styled.img`
+  height: ${({ windowSize }) => (windowSize < 800 ? "50px" : "30px")};
 `;
