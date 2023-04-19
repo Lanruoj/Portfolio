@@ -1,5 +1,5 @@
 import { Ul } from "./styled/Ul";
-import { ListItem } from "./styled/ListItem";
+import { ListItem, ListItemLabel } from "./styled/ListItem";
 
 const ListCardWithLabels = (props) => {
   return (
@@ -9,7 +9,7 @@ const ListCardWithLabels = (props) => {
         {props.items.map((item) => {
           return (
             <ListItem key={item.label}>
-              {item.label ? <h3>{item.label}</h3> : null}
+              {item.label ? <ListItemLabel>{item.label}</ListItemLabel> : null}
               {item.value}
             </ListItem>
           );

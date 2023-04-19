@@ -5,4 +5,9 @@ const ListItem = styled.li`
   margin: 0.3rem;
 `;
 
-export { ListItem };
+const ListItemLabel = styled.h3`
+  font-family: "Spline Sans Mono", monospace;
+  font-size: 1.2rem;
+`;
+
+export { ListItem, ListItemLabel };
