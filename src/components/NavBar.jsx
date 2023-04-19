@@ -13,7 +13,7 @@ export const NavBar = (props) => {
   let urlPath = props.location.pathname;
 
   return (
-    <>
+    <NavWrapper>
       <NavContainer>
         <MenuButton onClick={toggleMenu}>&gt;</MenuButton>
         <Logo src={squareLogo} />
@@ -99,25 +99,54 @@ export const NavBar = (props) => {
           </ContactLink>
         </LogoForm>
       </MenuContainer>
-    </>
+    </NavWrapper>
   );
 };
+
+const NavWrapper = styled.div`
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+`;
 
 const NavContainer = styled.nav`
   position: fixed;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
+  max-width: 80rem;
   height: 4rem;
   top: 0;
   z-index: 999;
 `;
 
+const menuButtonBounce = keyframes`
+0% { margin-left: 1rem }
+50% { margin-left: 1.5rem }
+75% { margin-left: 1rem }
+100% { margin-left: 1rem }
+`;
+
+const MenuButton = styled.button`
+  background-color: rgba(255, 255, 255, 0);
+  color: black;
+  width: 3rem;
+  border: none;
+  font-size: 4rem;
+  padding: 0;
+  margin-left: 1rem;
+  animation-name: ${menuButtonBounce};
+  animation-duration: 0.8s;
+  animation-iteration-count: 2;
+  cursor: pointer;
+  :hover {
+    margin-left: 1.5rem;
+  }
+  transition: 0.2s ease-out;
+`;
+
 const Logo = styled.img`
-  position: fixed;
-  width: 4.5rem;
-  right: 0;
-  padding: 0.5rem;
+  margin: 0.5rem 0.5rem 0 0;
 `;
 
 const MenuContainer = styled.ul`
@@ -132,34 +161,6 @@ const MenuContainer = styled.ul`
   left: ${(props) =>
     props.menuVisible ? "0px" : props.windowSize > 800 ? "-37.5rem" : "-70vw"};
   transition: 0.5s;
-`;
-
-const menuButtonBounce = keyframes`
-0% { left: 0.5rem}
-50% {left: 1rem}
-75% { left: 0.5rem}
-100% {left: 0.5rem}
-`;
-
-const MenuButton = styled.button`
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0);
-  color: black;
-  width: 3rem;
-  border: none;
-  font-size: 4rem;
-  align-self: center;
-  left: 0.5rem;
-  padding: 0;
-  margin: 0;
-  animation-name: ${menuButtonBounce};
-  animation-duration: 0.8s;
-  animation-iteration-count: 2;
-  cursor: pointer;
-  :hover {
-    left: 1rem;
-  }
-  transition: 0.2s ease-out;
 `;
 
 const MenuLink = styled(Link)`
