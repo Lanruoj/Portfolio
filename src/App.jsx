@@ -8,7 +8,7 @@ import { About } from "./pages/About";
 import { Main } from "./components/Main";
 import { Projects } from "./pages/Projects";
 import { Contact } from "./pages/Contact";
-import styled from "styled-components";
+import { Page } from "./components/Page";
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -43,11 +43,5 @@ function App() {
     </>
   );
 }
-
-const Page = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-`;
 
 export default App;
