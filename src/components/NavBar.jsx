@@ -114,7 +114,7 @@ const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 80rem;
+  max-width: 60rem;
   height: 4rem;
   top: 0;
   z-index: 999;

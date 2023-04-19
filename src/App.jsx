@@ -8,6 +8,7 @@ import { About } from "./pages/About";
 import { Main } from "./components/Main";
 import { Projects } from "./pages/Projects";
 import { Contact } from "./pages/Contact";
+import styled from "styled-components";
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -24,21 +25,29 @@ function App() {
       <WindowSizeContext.Provider value={{ windowSize }}>
         <MenuContext.Provider value={{ menuVisible, setMenuVisible }}>
           <NavBar location={location} />
-          <Main
-            menuVisible={menuVisible ? true : false}
-            windowSize={windowSize}
-          >
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </Main>
+          <Page>
+            <Main
+              menuVisible={menuVisible ? true : false}
+              windowSize={windowSize}
+            >
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </Main>
+          </Page>
         </MenuContext.Provider>
       </WindowSizeContext.Provider>
     </>
   );
 }
+
+const Page = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
 
 export default App;
