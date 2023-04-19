@@ -5,73 +5,6 @@ import { Header } from "../components/Header";
 import { useWindowSizeContext } from "../utils/WindowSizeContext";
 import { Wrapper } from "../components/Wrapper";
 
-const ContactDetails = styled.address`
-  font-style: normal;
-  max-width: ${(props) => (props.windowSize > 800 ? "30rem" : "90vw")};
-`;
-
-const EmailForm = styled.form`
-  display: flex;
-  flex-direction: ${(props) => (props.windowSize > 800 ? "column" : "column")};
-  align-items: center;
-`;
-
-const NameAndEmailInput = styled.div`
-  display: flex;
-  flex-direction: ${(props) => (props.windowSize > 800 ? "row" : "column")};
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const MessageAndSubmit = styled.div`
-  width: ${(props) => (props.windowSize > 800 ? "30.5rem" : "90%")};
-`;
-
-const MessageField = styled.textarea`
-  margin: 1rem;
-  height: 10rem;
-  width: ${(props) => (props.windowSize > 800 ? "100%" : "90%")};
-  font-family: "Spline Sans Mono", monospace;
-  font-size: 1rem;
-  text-align: center;
-  line-height: 3rem;
-`;
-
-const Input = styled.input`
-  margin: 1rem;
-  height: 3rem;
-  width: 90%;
-  font-family: "Spline Sans Mono", monospace;
-  font-size: 1rem;
-  text-align: center;
-`;
-
-const SubmitButton = styled.button`
-  display: inline-block;
-  padding: 0 1rem 1rem 1rem;
-  margin-top: 0;
-  font-family: "Spline Sans Mono", sans-serif;
-  font-size: 1.5rem;
-  color: black;
-  text-align: center;
-  font-style: italic;
-  text-decoration: underline;
-  border: none;
-  background-color: transparent;
-  ::before {
-    content: ">\u00A0";
-    text-decoration: underline;
-    display: inline-block;
-    position: relative;
-    left: 0;
-    transition: 0.2s;
-  }
-  :hover::before {
-    left: 0.5rem;
-  }
-  cursor: pointer;
-`;
-
 export const Contact = () => {
   const { windowSize } = useWindowSizeContext();
   const form = useRef();
@@ -119,3 +52,70 @@ export const Contact = () => {
     </>
   );
 };
+
+const ContactDetails = styled.address`
+  font-style: normal;
+  max-width: ${(props) => (props.windowSize > 800 ? "30rem" : "90vw")};
+`;
+
+const EmailForm = styled.form`
+  display: flex;
+  flex-direction: ${(props) => (props.windowSize > 800 ? "column" : "column")};
+  align-items: center;
+`;
+
+const NameAndEmailInput = styled.div`
+  display: flex;
+  flex-direction: ${(props) => (props.windowSize > 800 ? "row" : "column")};
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const MessageAndSubmit = styled.div`
+  width: ${(props) => (props.windowSize > 800 ? "30.5rem" : "90%")};
+`;
+
+const MessageField = styled.textarea`
+  margin: 1rem;
+  height: 10rem;
+  width: ${(props) => (props.windowSize > 800 ? "100%" : "90%")};
+  font-family: "Spline Sans Mono", monospace;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 3rem;
+`;
+
+const Input = styled.input`
+  margin: 1rem;
+  height: 3rem;
+  width: 90%;
+  font-family: "Spline Sans Mono", monospace;
+  font-size: 1rem;
+  text-align: center;
+`;
+
+const SubmitButton = styled.button`
+  display: inline-block;
+  position: relative;
+  right: 1rem;
+  padding: 0 1rem 1rem 1rem;
+  margin-top: 0;
+  font-family: "Spline Sans Mono", sans-serif;
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+  text-decoration: underline;
+  border: none;
+  background-color: transparent;
+  ::before {
+    content: ">\u00A0";
+    display: inline-block;
+    position: relative;
+    left: 0;
+    transition: 0.2s;
+  }
+  :hover::before {
+    left: 0.5rem;
+  }
+  cursor: pointer;
+`;
