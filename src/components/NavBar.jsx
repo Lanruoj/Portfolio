@@ -15,7 +15,9 @@ export const NavBar = (props) => {
   return (
     <NavWrapper>
       <NavContainer>
-        <MenuButton onClick={toggleMenu}>&gt;</MenuButton>
+        <MenuButton onClick={toggleMenu} windowSize={windowSize}>
+          &gt;
+        </MenuButton>
         <Logo src={squareLogo} />
       </NavContainer>
       <MenuContainer
@@ -128,6 +130,7 @@ const menuButtonBounce = keyframes`
 `;
 
 const MenuButton = styled.button`
+  visibility: ${(props) => (props.windowSize > 1200 ? "hidden" : "visible")};
   background-color: rgba(255, 255, 255, 0);
   color: black;
   width: 3rem;
