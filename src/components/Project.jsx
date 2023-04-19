@@ -2,6 +2,19 @@ import styled from "styled-components";
 import { useWindowSizeContext } from "../utils/WindowSizeContext";
 import githubLogo from "../img/github-mark.png";
 
+export const Project = (props) => {
+  const { windowSize } = useWindowSizeContext();
+  return (
+    <ProjectContainer>
+      <ProjectHeading>{props.heading}</ProjectHeading>
+      <ProjectParagraph>{props.text}</ProjectParagraph>
+      <a href={props.link} target="_blank" rel="noreferrer">
+        <GithubLogo src={githubLogo} windowSize={windowSize} />
+      </a>
+    </ProjectContainer>
+  );
+};
+
 const ProjectContainer = styled.div`
   border-radius: 1rem;
   padding-top: 1rem;
@@ -19,16 +32,3 @@ const ProjectHeading = styled.h3`
 const ProjectParagraph = styled.p`
   max-width: 400px;
 `;
-
-export const Project = (props) => {
-  const { windowSize } = useWindowSizeContext();
-  return (
-    <ProjectContainer>
-      <ProjectHeading>{props.heading}</ProjectHeading>
-      <ProjectParagraph>{props.text}</ProjectParagraph>
-      <a href={props.link} target="_blank" rel="noreferrer">
-        <GithubLogo src={githubLogo} windowSize={windowSize} />
-      </a>
-    </ProjectContainer>
-  );
-};
