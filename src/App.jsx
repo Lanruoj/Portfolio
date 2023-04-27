@@ -16,7 +16,12 @@ function App() {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   useEffect(() => {
-    const handleWindowResize = () => setWindowSize(window.innerWidth);
+    const handleWindowResize = () => {
+      setWindowSize(window.innerWidth);
+      if (windowSize > 800) {
+        setMenuVisible(false);
+      }
+    };
     window.addEventListener("resize", handleWindowResize);
   }, [windowSize]);
 
