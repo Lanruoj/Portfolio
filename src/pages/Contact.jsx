@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Header } from "../components/Header";
 import { useWindowSizeContext } from "../utils/WindowSizeContext";
 import { Wrapper } from "../components/Wrapper";
+import { LogoForm } from "../components/LogoForm";
 
 export const Contact = () => {
   const { windowSize } = useWindowSizeContext();
@@ -47,6 +48,7 @@ export const Contact = () => {
               <SubmitButton type="submit">Send</SubmitButton>
             </MessageAndSubmit>
           </EmailForm>
+          <LogoForm />
         </ContactDetails>
       </Wrapper>
     </>
@@ -101,7 +103,7 @@ const SubmitButton = styled.button`
   padding: 0 1rem 1rem 1rem;
   margin-top: 0;
   font-family: "Spline Sans Mono", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: black;
   text-align: center;
   text-decoration: underline;

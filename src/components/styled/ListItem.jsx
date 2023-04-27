@@ -7,7 +7,7 @@ const ListItem = styled.li`
 
 const ListItemLabel = styled.h3`
   font-family: "Spline Sans Mono", monospace;
-  font-size: 1.2rem;
+  font-size: 1rem;
 `;
 
 export { ListItem, ListItemLabel };

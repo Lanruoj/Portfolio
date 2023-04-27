@@ -6,9 +6,8 @@ const StyledLink = styled(Link)`
   position: relative;
   right: 1rem;
   padding: 1rem;
-  margin-top: 1rem;
   font-family: "Spline Sans Mono", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: black;
   text-align: center;
   text-decoration: underline;
