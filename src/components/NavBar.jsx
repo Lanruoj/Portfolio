@@ -78,18 +78,18 @@ export const NavBar = (props) => {
 };
 
 const NavWrapper = styled.div`
-  background-color: red;
   display: flex;
   justify-content: center;
   width: 100vw;
 `;
 
 const NavContainer = styled.nav`
+  background-color: white;
+  height: 4rem;
   position: fixed;
   display: flex;
   justify-content: center;
   width: 100vw;
-  max-width: ${(props) => (props.windowSize > 800 ? "60rem" : "60rem")};
   height: 4rem;
   top: 0;
   z-index: 999;
@@ -136,10 +136,11 @@ const MenuContainer = styled.ul`
   position: ${(props) => (props.windowSize > 800 ? "relative" : "absolute")};
   display: flex;
   flex-direction: ${(props) => (props.windowSize > 800 ? "row" : "column")};
+  align-items: ${(props) => (props.windowSize > 800 ? "center" : "flex-start")};
   font-family: "Spline Sans Mono";
   list-style: none;
   width: ${(props) => (props.windowSize > 800 ? "-37.5rem" : "70vw")};
-  top: ${(props) => (props.windowSize > 800 ? "1.5rem" : "4rem")};
+  top: ${(props) => (props.windowSize > 800 ? "0rem" : "4rem")};
   height: ${(props) => (props.windowSize > 800 ? "4rem" : "100vw")};
   left: ${(props) =>
     props.menuVisible || props.windowSize > 800
@@ -153,6 +154,6 @@ const MenuContainer = styled.ul`
 const MenuLink = styled(Link)`
   margin: 1rem;
   color: black;
-  text-decoration: underline;
-  font-size: ${(props) => (props.windowSize < 800 ? "2rem" : "1.5rem")};
+  text-decoration: none;
+  font-size: ${(props) => (props.windowSize < 800 ? "2rem" : "1rem")};
 `;
