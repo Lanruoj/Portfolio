@@ -14,16 +14,15 @@ export const NavBar = (props) => {
 
   return (
     <NavWrapper>
-      <NavContainer>
+      <NavContainer windowSize={windowSize}>
         {windowSize < 800 && (
-          <MenuButtonContainer>
-            <MenuButton
-              onClick={windowSize < 800 ? toggleMenu : null}
-              windowSize={windowSize}
-            >
-              &gt;
-            </MenuButton>
-          </MenuButtonContainer>
+          <MenuButton
+            onClick={windowSize < 800 ? toggleMenu : null}
+            windowSize={windowSize}
+            menuVisible={menuVisible && menuVisible}
+          >
+            &gt;
+          </MenuButton>
         )}
         <MenuContainer
           menuVisible={menuVisible && menuVisible}
@@ -83,11 +82,13 @@ const NavWrapper = styled.div`
 `;
 
 const NavContainer = styled.nav`
-  background-color: white;
+  background-color: rgba(242, 238, 232, 0.768);
   height: 4rem;
   position: fixed;
   display: flex;
-  justify-content: center;
+  justify-content: ${(props) =>
+    props.windowSize > 800 ? "center" : "space-between"};
+  align-items: center;
   width: 100vw;
   height: 4rem;
   top: 0;
@@ -99,10 +100,6 @@ const menuButtonBounce = keyframes`
 50% { margin-left: 1.5rem }
 75% { margin-left: 1rem }
 100% { margin-left: 1rem }
-`;
-
-const MenuButtonContainer = styled.div`
-  width: 5rem;
 `;
 
 const MenuButton = styled.button`
@@ -119,14 +116,11 @@ const MenuButton = styled.button`
   animation-duration: 0.8s;
   animation-iteration-count: 2;
   cursor: pointer;
-  :hover {
-    margin-left: 1.5rem;
-  }
   transition: 0.2s ease-out;
 `;
 
 const Logo = styled.img`
-  margin: 0.5rem 0.5rem 0 0;
+  margin-right: 1rem;
   height: 3rem;
   cursor: pointer;
 `;
