@@ -100,15 +100,17 @@ const SubmitButton = styled.button`
   display: inline-block;
   position: relative;
   right: 1rem;
-  padding: 0 1rem 1rem 1rem;
+  padding: 1rem;
   margin-top: 0;
   font-family: "Spline Sans Mono", sans-serif;
   font-size: 1.2rem;
   color: black;
   text-align: center;
-  text-decoration: underline;
+  text-decoration: none;
   border: none;
   background-color: transparent;
+  border: solid black 1px;
+  line-height: 0.5;
   ::before {
     content: ">\u00A0";
     display: inline-block;
