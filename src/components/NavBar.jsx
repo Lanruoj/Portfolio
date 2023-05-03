@@ -3,7 +3,6 @@ import squareLogo from "../img/ta-ne-logo.png";
 import { useMenuContext } from "../utils/MenuContext";
 import { useWindowSizeContext } from "../utils/WindowSizeContext";
 import { Link } from "react-router-dom";
-import { LogoForm } from "./LogoForm";
 
 export const NavBar = (props) => {
   const { menuVisible, setMenuVisible } = useMenuContext();
