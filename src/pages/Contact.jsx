@@ -99,7 +99,6 @@ const Input = styled.input`
 const SubmitButton = styled.button`
   display: inline-block;
   position: relative;
-  right: 1rem;
   padding: 1rem;
   margin-top: 0;
   font-family: "Spline Sans Mono", sans-serif;
