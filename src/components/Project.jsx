@@ -17,7 +17,7 @@ export const Project = (props) => {
 
 const ProjectContainer = styled.div`
   border-radius: 1rem;
-  padding-top: 1rem;
+  padding: 1rem;
 `;
 
 const GithubLogo = styled.img`

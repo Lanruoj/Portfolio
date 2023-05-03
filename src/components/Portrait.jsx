@@ -4,7 +4,7 @@ import portrait from "../img/portrait-cropped.jpeg";
 
 const StyledImg = styled.img`
   max-width: ${(props) => (props.windowSize > 500 ? "300px" : "90%")};
-  border-radius: 1rem;
+  border-radius: 2%;
 `;
 
 const Portrait = () => {

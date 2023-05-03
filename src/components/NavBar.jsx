@@ -13,185 +13,140 @@ export const NavBar = (props) => {
   let urlPath = props.location.pathname;
 
   return (
-    <>
-      <NavContainer>
-        <MenuButton onClick={toggleMenu}>&gt;</MenuButton>
-        <Logo src={squareLogo} />
-      </NavContainer>
-      <MenuContainer
-        menuVisible={menuVisible && menuVisible}
-        windowSize={windowSize}
-      >
-        <li>
-          <MenuLink
-            to="/"
-            id="home"
-            onClick={toggleMenu}
+    <NavWrapper>
+      <NavContainer windowSize={windowSize}>
+        {windowSize < 800 && (
+          <MenuButton
+            onClick={windowSize < 800 ? toggleMenu : null}
             windowSize={windowSize}
+            menuVisible={menuVisible && menuVisible}
           >
-            {urlPath === "/" ? <s>Home</s> : "Home"}
-          </MenuLink>
-        </li>
-        <li>
-          <MenuLink
-            to="/about"
-            id="about"
-            onClick={toggleMenu}
-            windowSize={windowSize}
-          >
-            {urlPath === "/about" ? <s>About</s> : "About"}
-          </MenuLink>
-        </li>
-        <li>
-          <MenuLink
-            to="/projects"
-            id="projects"
-            onClick={toggleMenu}
-            windowSize={windowSize}
-          >
-            {urlPath === "/projects" ? <s>Projects</s> : "Projects"}
-          </MenuLink>
-        </li>
-        <li>
-          <MenuLink
-            to="/contact"
-            id="contact"
-            onClick={toggleMenu}
-            windowSize={windowSize}
-          >
-            {urlPath === "/contact" ? <s>Contact</s> : "Contact"}
-          </MenuLink>
-        </li>
-        <LogoForm
+            &gt;
+          </MenuButton>
+        )}
+        <MenuContainer
           menuVisible={menuVisible && menuVisible}
           windowSize={windowSize}
         >
-          <ContactLink href="tel:+61466651820" target="_blank">
-            <img
-              src={require("../img/phone-logo.png")}
-              width="50px"
-              alt="Phone"
-            />
-          </ContactLink>
-          <ContactLink href="mailto:tanesamuelkaio@gmail.com" target="_blank">
-            <img
-              src={require("../img/email-logo.png")}
-              width="50px"
-              alt="Email"
-            />
-          </ContactLink>
-          <ContactLink href="https://github.com/Lanruoj" target="_blank">
-            <img
-              src={require("../img/github-mark.png")}
-              width="50px"
-              alt="GitHub"
-            />
-          </ContactLink>
-          <ContactLink
-            href="https://www.linkedin.com/in/tane-kaio/"
-            target="_blank"
-          >
-            <img
-              src={require("../img/li-logo.png")}
-              height="50px"
-              alt="LinkedIn"
-            />
-          </ContactLink>
-        </LogoForm>
-      </MenuContainer>
-    </>
+          <li>
+            <MenuLink
+              to="/"
+              id="home"
+              onClick={windowSize < 800 ? toggleMenu : null}
+              windowSize={windowSize}
+            >
+              {urlPath === "/" ? <s>Home</s> : "Home"}
+            </MenuLink>
+          </li>
+          <li>
+            <MenuLink
+              to="/about"
+              id="about"
+              onClick={windowSize < 800 ? toggleMenu : null}
+              windowSize={windowSize}
+            >
+              {urlPath === "/about" ? <s>About</s> : "About"}
+            </MenuLink>
+          </li>
+          <li>
+            <MenuLink
+              to="/projects"
+              id="projects"
+              onClick={windowSize < 800 ? toggleMenu : null}
+              windowSize={windowSize}
+            >
+              {urlPath === "/projects" ? <s>Projects</s> : "Projects"}
+            </MenuLink>
+          </li>
+          <li>
+            <MenuLink
+              to="/contact"
+              id="contact"
+              onClick={windowSize < 800 ? toggleMenu : null}
+              windowSize={windowSize}
+            >
+              {urlPath === "/contact" ? <s>Contact</s> : "Contact"}
+            </MenuLink>
+          </li>
+        </MenuContainer>
+        <Logo src={squareLogo} onClick={windowSize < 800 ? toggleMenu : null} />
+      </NavContainer>
+    </NavWrapper>
   );
 };
 
-const NavContainer = styled.nav`
-  position: fixed;
+const NavWrapper = styled.div`
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
+`;
+
+const NavContainer = styled.nav`
+  background-color: rgba(242, 238, 232, 0.768);
+  height: 4rem;
+  position: fixed;
+  display: flex;
+  justify-content: ${(props) =>
+    props.windowSize > 800 ? "center" : "space-between"};
+  align-items: center;
+  width: 100vw;
   height: 4rem;
   top: 0;
   z-index: 999;
 `;
 
-const Logo = styled.img`
-  position: fixed;
-  width: 4.5rem;
-  right: 0;
-  padding: 0.5rem;
-`;
-
-const MenuContainer = styled.ul`
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Spline Sans Mono";
-  list-style: none;
-  width: ${(props) => (props.windowSize > 800 ? "-37.5rem" : "70vw")};
-  height: 100vh;
-  left: ${(props) =>
-    props.menuVisible ? "0px" : props.windowSize > 800 ? "-37.5rem" : "-70vw"};
-  transition: 0.5s;
-`;
-
 const menuButtonBounce = keyframes`
-0% { left: 0.5rem}
-50% {left: 1rem}
-75% { left: 0.5rem}
-100% {left: 0.5rem}
+0% { margin-left: 1rem }
+50% { margin-left: 1.5rem }
+75% { margin-left: 1rem }
+100% { margin-left: 1rem }
 `;
 
 const MenuButton = styled.button`
-  position: absolute;
+  z-index: 9999;
+  visibility: ${(props) => (props.windowSize > 800 ? "hidden" : "visible")};
   background-color: rgba(255, 255, 255, 0);
   color: black;
   width: 3rem;
   border: none;
   font-size: 4rem;
-  align-self: center;
-  left: 0.5rem;
   padding: 0;
-  margin: 0;
+  margin-left: 1rem;
   animation-name: ${menuButtonBounce};
   animation-duration: 0.8s;
   animation-iteration-count: 2;
   cursor: pointer;
-  :hover {
-    left: 1rem;
-  }
   transition: 0.2s ease-out;
 `;
 
-const MenuLink = styled(Link)`
-  color: black;
-  text-decoration: none;
-  font-style: italic;
-  font-size: ${(props) => (props.windowSize < 360 ? "2rem" : "2.5rem")};
-  :hover::before {
-    content: ">";
-  }
+const Logo = styled.img`
+  margin-right: 1rem;
+  height: 3rem;
+  cursor: pointer;
 `;
 
-const LogoForm = styled.div`
+const MenuContainer = styled.ul`
+  position: ${(props) => (props.windowSize > 800 ? "relative" : "absolute")};
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 1rem;
+  flex-direction: ${(props) => (props.windowSize > 800 ? "row" : "column")};
+  align-items: ${(props) => (props.windowSize > 800 ? "center" : "flex-start")};
+  font-family: "Spline Sans Mono";
+  list-style: none;
+  width: ${(props) => (props.windowSize > 800 ? "-37.5rem" : "70vw")};
+  top: ${(props) => (props.windowSize > 800 ? "0rem" : "4rem")};
+  height: ${(props) => (props.windowSize > 800 ? "4rem" : "100vw")};
   left: ${(props) =>
-    props.menuVisible ? "0px" : props.windowSize > 800 ? "-37.5rem" : "-70vw"};
-  width: ${(props) => (props.windowSize < 360 ? "min-content" : "18rem")};
-  top: 20rem;
+    props.menuVisible || props.windowSize > 800
+      ? "0px"
+      : props.windowSize > 800
+      ? "-37.5rem"
+      : "-70vw"};
   transition: 0.5s;
 `;
 
-const ContactLink = styled.a`
-  margin: 0 0.5rem 0 0.5rem;
-  display: block;
+const MenuLink = styled(Link)`
+  margin: 1rem;
+  color: black;
   text-decoration: none;
-  text-align: center;
-  display: block;
-  color: #343434;
-  font-family: "Spline Sans Mono", monospace;
+  font-size: ${(props) => (props.windowSize < 800 ? "2rem" : "1rem")};
 `;

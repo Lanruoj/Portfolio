@@ -8,6 +8,7 @@ import { About } from "./pages/About";
 import { Main } from "./components/Main";
 import { Projects } from "./pages/Projects";
 import { Contact } from "./pages/Contact";
+import { Page } from "./components/Page";
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -15,7 +16,12 @@ function App() {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   useEffect(() => {
-    const handleWindowResize = () => setWindowSize(window.innerWidth);
+    const handleWindowResize = () => {
+      setWindowSize(window.innerWidth);
+      if (windowSize > 800) {
+        setMenuVisible(false);
+      }
+    };
     window.addEventListener("resize", handleWindowResize);
   }, [windowSize]);
 
@@ -24,17 +30,19 @@ function App() {
       <WindowSizeContext.Provider value={{ windowSize }}>
         <MenuContext.Provider value={{ menuVisible, setMenuVisible }}>
           <NavBar location={location} />
-          <Main
-            menuVisible={menuVisible ? true : false}
-            windowSize={windowSize}
-          >
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </Main>
+          <Page>
+            <Main
+              menuVisible={menuVisible ? true : false}
+              windowSize={windowSize}
+            >
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </Main>
+          </Page>
         </MenuContext.Provider>
       </WindowSizeContext.Provider>
     </>
