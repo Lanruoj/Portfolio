@@ -5,7 +5,9 @@ export const HeroText = (props) => {
 };
 
 const Text = styled.h1`
-  color: red;
-  font-size: 22vw;
+  text-align: left;
+  padding-left: 15rem;
+  font-size: 15vw;
   font-family: "Spline Sans Mono", monospace;
+  color: #2d2d2d;
 `;
