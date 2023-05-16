@@ -5,6 +5,7 @@ const StyledLink = styled(Link)`
   display: inline-block;
   position: relative;
   padding: 1rem;
+  margin: 1rem;
   font-family: "Spline Sans Mono", sans-serif;
   font-size: 1.2rem;
   color: black;
