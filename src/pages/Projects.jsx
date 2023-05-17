@@ -9,6 +9,14 @@ export const Projects = () => {
       <Header>Projects</Header>
       <Wrapper>
         <Project
+          heading={"Portfolio"}
+          stack={"JavaScript / React / React Router / Netlify"}
+          text={
+            "A revised portfolio website utilising `React`, `react-router-dom`, `styled-components` & dynamic rendering to create a single-page application"
+          }
+          link={"https://github.com/Lanruoj/Portfolio"}
+        />
+        <Project
           heading={"Mental Health Journal API"}
           stack={
             "JavaScript / Express / Mongoose / MongoDB / JSONWebToken / Bcrypt / Helmet"
