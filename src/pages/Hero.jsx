@@ -20,12 +20,12 @@ const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
   position: fixed;
-  top: 0;
+  top: 4rem;
   left: 0;
 `;
 
 const Tane = styled.h1`
-  padding-top: 10vh;
+  padding-top: 5vh;
   padding-right: 10vw;
   font-size: 15vh;
   font-family: "Spline Sans Mono", monospace;
@@ -33,7 +33,7 @@ const Tane = styled.h1`
 `;
 
 const Kaio = styled.h1`
-  padding-bottom: 10vh;
+  padding-bottom: 5vh;
   padding-left: 10vw;
   font-size: 15vh;
   font-family: "Spline Sans Mono", monospace;
