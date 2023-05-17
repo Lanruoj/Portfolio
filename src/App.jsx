@@ -3,7 +3,6 @@ import { NavBar } from "./components/NavBar";
 import { MenuContext } from "./utils/MenuContext";
 import { useState, useEffect } from "react";
 import { WindowSizeContext } from "./utils/WindowSizeContext";
-import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Main } from "./components/Main";
 import { Projects } from "./pages/Projects";

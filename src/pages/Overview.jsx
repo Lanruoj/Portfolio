@@ -1,6 +1,4 @@
-import { LocalLink } from "../components/LocalLink";
 import { ListCardWithLabels } from "../components/ListCardWithLabels";
-import { Header } from "../components/Header";
 import { Wrapper } from "../components/Wrapper";
 
 export const Overview = () => {
