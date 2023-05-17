@@ -30,15 +30,14 @@ function App() {
     <>
       <WindowSizeContext.Provider value={{ windowSize }}>
         <MenuContext.Provider value={{ menuVisible, setMenuVisible }}>
-          {location.pathname !== "/hero" && <NavBar location={location} />}
+          <NavBar location={location} />
           <Page>
             <Main
               menuVisible={menuVisible ? true : false}
               windowSize={windowSize}
             >
               <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/hero" element={<Hero />} />
+                <Route path="/" element={<Hero />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/contact" element={<Contact />} />
