@@ -1,16 +1,14 @@
 import styled from "styled-components";
-import { HeroText } from "../components/styled/HeroText";
 import { LocalLink } from "../components/LocalLink";
+import { Header } from "../components/Header";
 import heroBg from "../img/mt-feathertop.JPG";
 
 export const Hero = () => {
   return (
     <Wrapper>
-      <HeroText>
-        Tāne
-        <br />
-        &nbsp;&nbsp;&nbsp;Kaio
-      </HeroText>
+      <Tane>Tāne</Tane>
+      <Kaio>Kaio</Kaio>
+      <Undertitle>Software Engineer / Creator / Visionary</Undertitle>
       <LocalLink to="/about" text="About me" />
     </Wrapper>
   );
@@ -22,6 +20,27 @@ const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
   position: fixed;
-  top: 4rem;
+  top: 0;
   left: 0;
+`;
+
+const Tane = styled.h1`
+  padding-top: 10vh;
+  padding-right: 10vw;
+  font-size: 15vh;
+  font-family: "Spline Sans Mono", monospace;
+  color: #404040;
+`;
+
+const Kaio = styled.h1`
+  padding-bottom: 10vh;
+  padding-left: 10vw;
+  font-size: 15vh;
+  font-family: "Spline Sans Mono", monospace;
+  color: #404040;
+`;
+
+const Undertitle = styled(Header)`
+  color: #787878;
+  padding: 1rem;
 `;
