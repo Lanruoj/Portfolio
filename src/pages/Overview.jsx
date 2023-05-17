@@ -32,7 +32,6 @@ export const Overview = () => {
   ];
   return (
     <>
-      <Header>Overview</Header>
       <Wrapper>
         <div>
           <ListCardWithLabels items={personalDetails} />
@@ -41,7 +40,6 @@ export const Overview = () => {
           <ListCardWithLabels items={techSkills} />
         </div>
       </Wrapper>
-      <LocalLink to="/about" text="Learn more" />
     </>
   );
 };
