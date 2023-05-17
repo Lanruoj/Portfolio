@@ -3,6 +3,7 @@ import { Portrait } from "../components/Portrait";
 import { LocalLink } from "../components/LocalLink";
 import { LargeParagraph } from "../components/styled/LargeParagraph";
 import { Wrapper } from "../components/Wrapper";
+import { Overview } from "../pages/Overview";
 
 export const About = () => {
   return (
@@ -35,6 +36,10 @@ export const About = () => {
             to the real world.
           </LargeParagraph>
         </article>
+      </Wrapper>
+      <Header>Overview</Header>
+      <Wrapper>
+        <Overview />
       </Wrapper>
       <LocalLink to={"/projects"} text={"Projects"} />
     </>
