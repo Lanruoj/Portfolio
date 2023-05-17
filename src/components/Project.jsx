@@ -7,6 +7,7 @@ export const Project = (props) => {
   return (
     <ProjectContainer>
       <ProjectHeading>{props.heading}</ProjectHeading>
+      <TechStack>{props.stack}</TechStack>
       <ProjectParagraph>{props.text}</ProjectParagraph>
       <a href={props.link} target="_blank" rel="noreferrer">
         <GithubLogo src={githubLogo} windowSize={windowSize} />
@@ -16,8 +17,10 @@ export const Project = (props) => {
 };
 
 const ProjectContainer = styled.div`
+  text-align: center;
   border-radius: 1rem;
   padding: 1rem;
+  max-width: 400px;
 `;
 
 const GithubLogo = styled.img`
@@ -29,6 +32,9 @@ const ProjectHeading = styled.h3`
   font-family: "Spline Sans Mono", monospace;
 `;
 
-const ProjectParagraph = styled.p`
-  max-width: 400px;
+const TechStack = styled.p`
+  font-family: "Spline Sans Mono", monospace;
+  font-size: 0.8rem;
 `;
+
+const ProjectParagraph = styled.p``;
