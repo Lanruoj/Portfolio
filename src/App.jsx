@@ -9,6 +9,7 @@ import { Main } from "./components/Main";
 import { Projects } from "./pages/Projects";
 import { Contact } from "./pages/Contact";
 import { Page } from "./components/Page";
+import { Hero } from "./pages/Hero";
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -29,7 +30,7 @@ function App() {
     <>
       <WindowSizeContext.Provider value={{ windowSize }}>
         <MenuContext.Provider value={{ menuVisible, setMenuVisible }}>
-          <NavBar location={location} />
+          {location.pathname !== "/hero" && <NavBar location={location} />}
           <Page>
             <Main
               menuVisible={menuVisible ? true : false}
@@ -37,6 +38,7 @@ function App() {
             >
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/hero" element={<Hero />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/contact" element={<Contact />} />
