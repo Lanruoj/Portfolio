@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { StyledLink } from "./styled/StyledLink";
 
 const ExternalLink = (props) => {
