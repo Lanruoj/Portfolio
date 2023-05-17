@@ -10,6 +10,9 @@ export const Projects = () => {
       <Wrapper>
         <Project
           heading={"Mental Health Journal API"}
+          stack={
+            "JavaScript / Express / Mongoose / MongoDB / JSONWebToken / Bcrypt / Helmet"
+          }
           text={
             "An API that allows users to post their daily mood and mental health report, with the ability to share amongst approved friends"
           }
@@ -17,6 +20,9 @@ export const Projects = () => {
         />
         <Project
           heading={"Gig Guide API"}
+          stack={
+            "Python / Flask / SQLALchemy / Marshmallow / PostgreSQL / PyJWT /Bcrypt"
+          }
           text={
             "An API that allows users to post gigs and watch artists and venues for upcoming shows"
           }
@@ -24,6 +30,7 @@ export const Projects = () => {
         />
         <Project
           heading={"Task Manager"}
+          stack={"Python / Bash"}
           text={
             "A to-do list CLI application where you can add tasks with an optional deadline time, mark tasks as done, delete tasks, view completed tasks and more"
           }
@@ -31,6 +38,7 @@ export const Projects = () => {
         />
         <Project
           heading={"Portfolio (old)"}
+          stack={"HTML / CSS / SCSS"}
           text={
             "My portfolio site using purely HTML & CSS/SCSS built during my first few months of learning to code"
           }
