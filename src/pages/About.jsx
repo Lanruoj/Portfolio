@@ -28,11 +28,12 @@ export const About = () => {
             Development at Coder Academy where I learned the foundations of web
             development and developed a sincere passion for software engineering
             as a whole. We built front-end interfaces using HTML & CSS as well
-            as React/JavaScript, back-end APIs using Python and databases using
-            PostgreSQL, as well as using Atlassian project management and
-            thorough documentation. I spend most of my time learning and
-            practising code, sharpening my problem solving skills and learning
-            more about the world of technology.
+            as React/JavaScript, back-end APIs using JavaScript
+            (Express/Mongoose/MongoDB) & Python (Flask, SQLAlchemy) and
+            databases using PostgreSQL, as well as using Atlassian project
+            management and thorough documentation. I spend most of my time
+            learning and practising code, sharpening my problem solving skills
+            and learning more about the world of technology.
             <br />
             <br />
             My adventure into the land of coding may not have started long ago,
