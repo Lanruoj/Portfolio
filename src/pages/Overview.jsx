@@ -5,7 +5,7 @@ export const Overview = () => {
   const personalDetails = [
     { label: "Name", value: "Tāne Kaio" },
     { label: "Location", value: "Melbourne, Victoria, Australia" },
-    { label: "Age", value: "27 y/o" },
+    { label: "Age", value: "29 y/o" },
     {
       label: "Education",
       value: "Diploma of Information Technology (Coder Academy)",
@@ -16,7 +16,10 @@ export const Overview = () => {
     },
   ];
   const techSkills = [
-    { label: "Languages", value: "JavaScript / Python / HTML / CSS / SQL" },
+    {
+      label: "Languages",
+      value: "JavaScript / TypeScript / Python / HTML / CSS / SQL",
+    },
     {
       label: "JavaScript stack",
       value: "React / MongoDB / Mongoose / Express / Node",
