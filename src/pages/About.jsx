@@ -13,21 +13,26 @@ export const About = () => {
         <Portrait />
         <article>
           <LargeParagraph>
-            Hello! I'm Tāne and I'm a 27 year old Māori Australian software
-            engineer currently based in the lush surroundings of the foothills
-            of the Dandenong Ranges in Melbourne, Victoria.
+            Hello! I'm Tāne and I'm a 29 year old Māori Australian Full Stack
+            Web Developer currently based in Abbotsford, Melbourne, Victoria.
             <br />
             <br />
-            Currently participating in an internship program with flagship
-            whitegoods e-commerce company Winning Group, I am eagerly awaiting
-            an opportunity to take the next step in my professional development
-            and offer my skills, attitude and personality to the technology
-            industry.
+            I recently participated in a four month internship program with
+            flagship whitegoods e-commerce company Winning Group and I am
+            eagerly awaiting an opportunity to take the next step in my
+            professional development and offer my skills, attitude and
+            personality to the technology industry.
             <br />
             <br />
-            As a recent graduate of Web Development at Coder Academy I spend
-            most of my time learning and practising code, sharpening my problem
-            solving skills and learning more about the world of technology.
+            In 2023 I graduated with a diploma of IT in Full Stack Web
+            Development at Coder Academy where I learned the foundations of web
+            development and developed a sincere passion for software engineering
+            as a whole. We built front-end interfaces using HTML & CSS as well
+            as React/JavaScript, back-end APIs using Python and databases using
+            PostgreSQL, as well as using Atlassian project management and
+            thorough documentation. I spend most of my time learning and
+            practising code, sharpening my problem solving skills and learning
+            more about the world of technology.
             <br />
             <br />
             My adventure into the land of coding may not have started long ago,
